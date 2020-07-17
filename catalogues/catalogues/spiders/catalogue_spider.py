@@ -1,5 +1,7 @@
 import scrapy
 import csv
+import json
+from os.path import isfile
 
 class CatalogueSpider(scrapy.Spider):
     name = 'catalogues'
@@ -39,14 +41,39 @@ class CatalogueSpider(scrapy.Spider):
         else:
             last_page_url = response.request.url
             cata_name = response.xpath("//h1[@class='leaflet-title']/text()").get().split("\n")[1]
-            self.write_to_file(catalogue_page, cata_name, img_urls, last_page_url)
+            if self.check_catalogue_exists(cata_name, last_page_url) == False:
+                self.write_to_file(catalogue_page, cata_name, img_urls, last_page_url)
+                self.write_catalogue_history(cata_name, last_page_url)
 
     def write_to_file(self, catalogue_page, cata_name, img_urls, last_page_url):
         with open(catalogue_page["name"] + ".csv", "a", encoding='utf-8', newline="") as im_f:
             out_reader = csv.writer(im_f)
             for img in img_urls:
                 out_reader.writerow([catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],cata_name,img])
-                
+
+    def check_catalogue_exists(self, cata_name, last_page_url):
+        if isfile("download_history.json"):
+            with open("download_history.json", "r") as dh_file:
+                his_data = json.loads(dh_file)
+                if cata_name not in his_data.keys():
+                    return False
+                elif last_page_url not in his_data[cata_name].values():
+                    return False
+                else:
+                    return True
+        else:
+            with open("download_history.json", "w") as dh_file:
+                dh_file.write("{}")
+            
+    def write_catalogue_history(self, cata_name, last_page_url):
+        with open("download_history.json", "r+") as dh_file:
+            his_data = json.loads(dh_file)
+            if cata_name not in his_data.keys():
+                his_data[cata_name] = [last_page_url]
+            else:
+                his_data[cata_name].append(last_page_url)
+            json.dump(his_data, dh_file)
+
     def read_web_data(self):
         cata_pages = []
         with open("test.csv", "r") as web_file:
