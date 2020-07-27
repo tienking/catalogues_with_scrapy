@@ -33,8 +33,15 @@ class CatalogueSpider(scrapy.Spider):
                 yield scrapy.Request(url=catalogue_page["url"],
                                      callback=self.parse_winc_cata,
                                     cb_kwargs=dict(catalogue_page=catalogue_page))
+            elif catalogue_page["download_page"] == "pnp":
+                yield scrapy.Request(url=catalogue_page["url"],
+                                     callback=self.parse_pnp_cata,
+                                    cb_kwargs=dict(catalogue_page=catalogue_page))
 
-    def pasrse_winc_cata(self, response, catalogue_page):
+    def parse_winc_cata(self, response, catalogue_page):
+        pass
+        
+    def parse_pnp_cata(self, response, catalogue_page):
         pass
             
     def parse_au_cata(self, response, catalogue_page):
