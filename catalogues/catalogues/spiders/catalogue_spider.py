@@ -42,7 +42,24 @@ class CatalogueSpider(scrapy.Spider):
         pass
         
     def parse_pnp_cata(self, response, catalogue_page):
-        pass
+        block_all = response.xpath('//div[@class="row favourites-main"]/div/div[@class="content"]')
+        for block in block_all:
+            block_info = block.xpath('div/b/text()').getall()
+            block_name = block_info[0]
+            block_date = "No Date"
+            if len(block_info) >= 2:
+                block_date = block_info[1]
+                
+            cata_block = block.xpath('div[@class="categoryLandingHeader"]/a')
+            for cata in cata_block:
+                pdf_link = cata.xpath("@href").get()
+                if pdf_link.endswith(".pdf"):
+                    location = cata.xpath("text()").get()
+                    cata_name = block_name + "_" + block_date + "_" + location.strip()
+
+                    if self.check_catalogue_exists(catalogue_page["name"], pdf_link) == False:
+                        self.write_to_file(catalogue_page, cata_name, pdf_link, "pdf")
+                        self.write_catalogue_history(catalogue_page["name"], pdf_link)
             
     def parse_au_cata(self, response, catalogue_page):
         cata_all = response.xpath('//div[@class="leaflet-detail"]/a[@class="leaflet-img-mobile-detail-flex"]/@href').getall()
@@ -71,17 +88,21 @@ class CatalogueSpider(scrapy.Spider):
             last_page_url = response.request.url
             cata_name = response.xpath("//h1[@class='leaflet-title']/text()").get().split("\n")[1]
             if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
-                self.write_to_file(catalogue_page, cata_name, img_urls, last_page_url)
+                self.write_to_file(catalogue_page, cata_name, img_urls, "jpg")
                 self.write_catalogue_history(catalogue_page["name"], last_page_url)
 
-    def write_to_file(self, catalogue_page, cata_name, img_urls, last_page_url):
+    def write_to_file(self, catalogue_page, cata_name, img_urls, download_ext):
         if not exists(CATALOGUE_INFO_PATH):
             makedirs(CATALOGUE_INFO_PATH)
         with open(join(CATALOGUE_INFO_PATH, catalogue_page["name"] + ".csv"), "a", encoding='utf-8', newline="") as im_f:
             out_reader = csv.writer(im_f)
-            for img in img_urls:
-                out_reader.writerow([str(datetime.datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],cata_name,img])
-            self.download_imgs.append([catalogue_page["name"],str(datetime.datetime.now().date()),cata_name,img_urls])
+            
+            if type(img_urls) == list:
+                for img in img_urls:
+                    out_reader.writerow([str(datetime.datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],cata_name,img])
+            else:
+                out_reader.writerow([str(datetime.datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],cata_name,img_urls])
+            self.download_imgs.append([catalogue_page["name"],str(datetime.datetime.now().date()),cata_name,img_urls,download_ext])
 
     def check_catalogue_exists(self, cata_name, last_page_url):
         if cata_name not in self.cata_history.keys():
@@ -102,7 +123,7 @@ class CatalogueSpider(scrapy.Spider):
             with open(HISTORY_PATH, "w") as dh_file:
                 json.dump(self.cata_history, dh_file)
             print("---DOWNLOADING CATALOGUES---")
-            self.download_image_to_pdf()
+            self.download_catalogues()
             print("---DONE---")
             
     def read_history_data(self):
@@ -128,8 +149,8 @@ class CatalogueSpider(scrapy.Spider):
                 cata_pages.append(cata_dict)
                 
         return cata_pages
-    
-    def download_image_to_pdf(self):
+        
+    def download_catalogues(self):
         if not exists(CATALOGUE_PATH):
             makedirs(CATALOGUE_PATH)
         for download_img in self.download_imgs:
@@ -137,20 +158,33 @@ class CatalogueSpider(scrapy.Spider):
             output_path = join(CATALOGUE_PATH,download_img[0],cata_uni_name)
             if not exists(output_path):
                 makedirs(output_path)
-            index = 1
-            for img_url in download_img[3]:
-                img_path = join(output_path,"page_" + str(index).rjust(3, '0') + ".jpg")
-                #--------------
-                r = requests.get(img_url, stream=True, headers={'User-agent': 'Mozilla/5.0'})
-                if r.status_code == 200:
-                    with open(img_path, 'wb') as f:
-                        r.raw.decode_content = True
-                        shutil.copyfileobj(r.raw, f)
-                #--------------
-                #urllib.request.urlretrieve(img_url, img_path)
-                index += 1
-            self.images_to_pdf(output_path, cata_uni_name)
+            if download_img[-1] == "jpg":
+                self.download_jpg_to_pdf(download_img, download_img[2], output_path)
+            elif download_img[-1] == "pdf":
+                self.download_pdf(download_img, download_img[2], output_path)
     
-    def images_to_pdf(self, output_path, cata_uni_name):
-        with open(join(output_path, cata_uni_name + ".pdf"), "wb") as pdf_file:
+    def download_pdf(self, download_img, cata_name, output_path):
+        r = requests.get(download_img[3], stream=True, headers={'User-agent': 'Mozilla/5.0'})
+        if r.status_code == 200:
+            with open(join(output_path, cata_name + ".pdf"), 'wb') as f:
+                r.raw.decode_content = True
+                shutil.copyfileobj(r.raw, f)
+    
+    def download_jpg_to_pdf(self, download_img, cata_name, output_path):
+        index = 1
+        for img_url in download_img[3]:
+            img_path = join(output_path,"page_" + str(index).rjust(3, '0') + ".jpg")
+            #--------------
+            r = requests.get(img_url, stream=True, headers={'User-agent': 'Mozilla/5.0'})
+            if r.status_code == 200:
+                with open(img_path, 'wb') as f:
+                    r.raw.decode_content = True
+                    shutil.copyfileobj(r.raw, f)
+            #--------------
+            #urllib.request.urlretrieve(img_url, img_path)
+            index += 1
+        self.images_to_pdf(output_path, cata_name)
+    
+    def images_to_pdf(self, output_path, cata_name):
+        with open(join(output_path, cata_name + ".pdf"), "wb") as pdf_file:
             pdf_file.write(img2pdf.convert([join(output_path, img) for img in listdir(output_path) if img.endswith(".jpg")]))
