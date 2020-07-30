@@ -1,14 +1,20 @@
+#---Scrapy---
 import scrapy
+#---Files---
 import csv
 import json
+#---Operation---
 from os.path import isfile, join, abspath, exists
 from os import makedirs, listdir
-import urllib.request
-import img2pdf
-import datetime
-#--------------
+#---Ad-hoc Library---
 import requests
+import img2pdf
 import shutil
+import datetime
+#---Selenium---
+from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 
 HISTORY_PATH = "download_history.json"
 CATALOGUE_INFO_PATH = abspath("./images_info/")
@@ -19,9 +25,24 @@ class CatalogueSpider(scrapy.Spider):
     name = 'catalogues'
     
     def __init__(self):
+        #---Selenium---
+        self.driver = self.get_driver()
+        #---Catalogues---
         self.catalogue_pages = self.read_web_data()
         self.cata_history = self.read_history_data()
         self.download_imgs = []
+        
+    def get_driver(self):
+        chrome_options = Options()
+        prefs = {"plugins.always_open_pdf_externally": True}
+        chrome_options.add_experimental_option("prefs",prefs)
+        chrome_options.add_argument("--incognito")
+        chrome_options.add_argument("--test-type")
+        chrome_options.add_argument('--ignore-certificate-errors')
+        chrome_options.add_argument('--headless')
+        web_driver = webdriver.Chrome(options=chrome_options, executable_path="./chromedriver.exe")
+        #web_driver.maximize_window()
+        return web_driver
     
     def start_requests(self):
         for catalogue_page in self.catalogue_pages:
@@ -37,9 +58,27 @@ class CatalogueSpider(scrapy.Spider):
                 yield scrapy.Request(url=catalogue_page["url"],
                                      callback=self.parse_pnp_cata,
                                     cb_kwargs=dict(catalogue_page=catalogue_page))
+            elif catalogue_page["download_page"] == "cs":
+                yield scrapy.Request(url=catalogue_page["url"],
+                                     callback=self.parse_cs_cata,
+                                    cb_kwargs=dict(catalogue_page=catalogue_page))
 
     def parse_winc_cata(self, response, catalogue_page):
         pass
+    
+    def parse_cs_cata(self, response, catalogue_page):
+        web_source = self.driver.get(response.url)
+        
+        catalogue_list = web_source.find_elements_by_xpath("//div[@class='sf-catalogues-tile rocket__tile']")
+        for catalogue in catalogue_list:
+            try:
+                catalogue.find_element_by_xpath("a[@class='sf-catalogues-tile-image']")
+            except NoSuchElementException:
+                continue
+            
+            cata_name = catalogue.find_element_by_xpath("div[@class='sf-catalogues-tile-details-details']/div/h3[@class='sale-name-cell']").text
+            cata_date = catalogue.find_elements_by_xpath("div[@class='sf-catalogues-tile-details-details']/div/div")[-1].text
+            
         
     def parse_pnp_cata(self, response, catalogue_page):
         block_all = response.xpath('//div[@class="row favourites-main"]/div/div[@class="content"]')
@@ -181,7 +220,6 @@ class CatalogueSpider(scrapy.Spider):
                     r.raw.decode_content = True
                     shutil.copyfileobj(r.raw, f)
             #--------------
-            #urllib.request.urlretrieve(img_url, img_path)
             index += 1
         self.images_to_pdf(output_path, cata_name)
     
