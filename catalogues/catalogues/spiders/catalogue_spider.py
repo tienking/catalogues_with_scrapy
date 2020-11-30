@@ -11,10 +11,6 @@ import requests
 import img2pdf
 import shutil
 import datetime
-#---Selenium---
-from selenium.webdriver.chrome.options import Options
-from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
 
 HISTORY_PATH = "download_history.json"
 CATALOGUE_INFO_PATH = abspath("./images_info/")
@@ -25,24 +21,10 @@ class CatalogueSpider(scrapy.Spider):
     name = 'catalogues'
     
     def __init__(self):
-        #---Selenium---
-        self.driver = self.get_driver()
         #---Catalogues---
         self.catalogue_pages = self.read_web_data()
         self.cata_history = self.read_history_data()
         self.download_imgs = []
-        
-    def get_driver(self):
-        chrome_options = Options()
-        prefs = {"plugins.always_open_pdf_externally": True}
-        chrome_options.add_experimental_option("prefs",prefs)
-        chrome_options.add_argument("--incognito")
-        chrome_options.add_argument("--test-type")
-        chrome_options.add_argument('--ignore-certificate-errors')
-        chrome_options.add_argument('--headless')
-        web_driver = webdriver.Chrome(options=chrome_options, executable_path="./chromedriver.exe")
-        #web_driver.maximize_window()
-        return web_driver
     
     def start_requests(self):
         for catalogue_page in self.catalogue_pages:
@@ -50,55 +32,6 @@ class CatalogueSpider(scrapy.Spider):
                 yield scrapy.Request(url=catalogue_page["url"],
                                      callback=self.parse_au_cata,
                                     cb_kwargs=dict(catalogue_page=catalogue_page))
-            elif catalogue_page["download_page"] == "winc":
-                yield scrapy.Request(url=catalogue_page["url"],
-                                     callback=self.parse_winc_cata,
-                                    cb_kwargs=dict(catalogue_page=catalogue_page))
-            elif catalogue_page["download_page"] == "pnp":
-                yield scrapy.Request(url=catalogue_page["url"],
-                                     callback=self.parse_pnp_cata,
-                                    cb_kwargs=dict(catalogue_page=catalogue_page))
-            elif catalogue_page["download_page"] == "cs":
-                yield scrapy.Request(url=catalogue_page["url"],
-                                     callback=self.parse_cs_cata,
-                                    cb_kwargs=dict(catalogue_page=catalogue_page))
-
-    def parse_winc_cata(self, response, catalogue_page):
-        pass
-    
-    def parse_cs_cata(self, response, catalogue_page):
-        web_source = self.driver.get(response.url)
-        
-        catalogue_list = web_source.find_elements_by_xpath("//div[@class='sf-catalogues-tile rocket__tile']")
-        for catalogue in catalogue_list:
-            try:
-                catalogue.find_element_by_xpath("a[@class='sf-catalogues-tile-image']")
-            except NoSuchElementException:
-                continue
-            
-            cata_name = catalogue.find_element_by_xpath("div[@class='sf-catalogues-tile-details-details']/div/h3[@class='sale-name-cell']").text
-            cata_date = catalogue.find_elements_by_xpath("div[@class='sf-catalogues-tile-details-details']/div/div")[-1].text
-            
-        
-    def parse_pnp_cata(self, response, catalogue_page):
-        block_all = response.xpath('//div[@class="row favourites-main"]/div/div[@class="content"]')
-        for block in block_all:
-            block_info = block.xpath('div/b/text()').getall()
-            block_name = block_info[0]
-            block_date = "No Date"
-            if len(block_info) >= 2:
-                block_date = block_info[1]
-                
-            cata_block = block.xpath('div[@class="categoryLandingHeader"]/a')
-            for cata in cata_block:
-                pdf_link = cata.xpath("@href").get()
-                if pdf_link.endswith(".pdf"):
-                    location = cata.xpath("text()").get()
-                    cata_name = block_name + "_" + block_date + "_" + location.strip()
-
-                    if self.check_catalogue_exists(catalogue_page["name"], pdf_link) == False:
-                        self.write_to_file(catalogue_page, cata_name, pdf_link, "pdf")
-                        self.write_catalogue_history(catalogue_page["name"], pdf_link)
             
     def parse_au_cata(self, response, catalogue_page):
         cata_all = response.xpath('//div[@class="leaflet-detail"]/a[@class="leaflet-img-mobile-detail-flex"]/@href').getall()
@@ -107,27 +40,31 @@ class CatalogueSpider(scrapy.Spider):
             cata_page = response.urljoin(cata)
             yield scrapy.Request(url=cata_page,
                                  callback=self.parse_au_detail,
-                                cb_kwargs=dict(catalogue_page=catalogue_page, img_urls=img_urls))
+                                cb_kwargs=dict(catalogue_page=catalogue_page, img_urls=img_urls, last_page_response=None))
 
-    def parse_au_detail(self, response, catalogue_page, img_urls):
-        page = response.url.split("/")[-1]
-        root_url = response.css('a.ga-classic-leaflet::attr(href)').get()
-        img_url = response.css('img#leaflet::attr(src)').get()
-        img_path = response.urljoin(img_url)
-        
-        img_urls.append(img_path)
-        
+    def parse_au_detail(self, response, catalogue_page, img_urls, last_page_response):
         next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
         if next_page is not None:
+            page = response.url.split("/")[-1]
+            root_url = response.css('a.ga-classic-leaflet::attr(href)').get()
+            img_url = response.css('img#leaflet::attr(src)').get()
+            img_path = response.urljoin(img_url)
+            
+            img_urls.append(img_path)
+            
+            last_page_response = response
+            last_page_url = response.request.url
+        
             next_page = response.urljoin(next_page)
+
             yield scrapy.Request(url=next_page,
                                  callback=self.parse_au_detail,
-                                 cb_kwargs=dict(catalogue_page=catalogue_page, img_urls=img_urls))
+                                 cb_kwargs=dict(catalogue_page=catalogue_page, img_urls=img_urls, last_page_response=last_page_response))
         else:
-            last_page_url = response.request.url
-            cata_name = response.xpath("//h1[@class='leaflet-title']/text()").get().split("\n")[1]
+            last_page_url = last_page_response.request.url
             if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
-                self.write_to_file(catalogue_page, cata_name, img_urls, "jpg")
+                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().replace("\n","").split(" - ")[:-1])
+                self.write_to_file(catalogue_page, last_page_name, img_urls, "jpg")
                 self.write_catalogue_history(catalogue_page["name"], last_page_url)
 
     def write_to_file(self, catalogue_page, cata_name, img_urls, download_ext):
@@ -195,8 +132,17 @@ class CatalogueSpider(scrapy.Spider):
         for download_img in self.download_imgs:
             cata_uni_name = download_img[1] + "_" + download_img[2]
             output_path = join(CATALOGUE_PATH,download_img[0],cata_uni_name)
-            if not exists(output_path):
-                makedirs(output_path)
+                
+            if exists(output_path):
+                cata_index = 1
+                temp_path = output_path
+                while exists(temp_path):
+                    temp_path = output_path + "_" + str(cata_index)
+                    cata_index += 1
+                
+                output_path = temp_path
+            makedirs(output_path)
+                    
             if download_img[-1] == "jpg":
                 self.download_jpg_to_pdf(download_img, download_img[2], output_path)
             elif download_img[-1] == "pdf":
