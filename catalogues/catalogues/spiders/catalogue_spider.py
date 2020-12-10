@@ -36,11 +36,38 @@ class CatalogueSpider(scrapy.Spider):
     def parse_au_cata(self, response, catalogue_page):
         cata_all = response.xpath('//div[@class="leaflet-detail"]/a[@class="leaflet-img-mobile-detail-flex"]/@href').getall()
         for cata in cata_all:
-            img_urls = []
             cata_page = response.urljoin(cata)
             yield scrapy.Request(url=cata_page,
-                                 callback=self.parse_au_detail,
-                                cb_kwargs=dict(catalogue_page=catalogue_page, img_urls=img_urls, last_page_response=None))
+                                 callback=self.check_last_page_exists,
+                                cb_kwargs=dict(catalogue_page=catalogue_page))
+
+    def check_last_page_exists(self, response, catalogue_page):
+        last_page_url = response.urljoin(response.xpath('//div[@class="numbers"]/a/@href')[-1].get())
+        
+        last_page_url_list = last_page_url.split("-")
+        last_page_url_list[-1] = str(int(last_page_url_list[-1]) - 1)
+        last_page_url = "-".join(last_page_url_list)
+        
+        if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
+            img_urls = []
+            
+            next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
+            if next_page is not None:
+                page = response.url.split("/")[-1]
+                root_url = response.css('a.ga-classic-leaflet::attr(href)').get()
+                img_url = response.css('img#leaflet::attr(src)').get()
+                img_path = response.urljoin(img_url)
+
+                img_urls.append(img_path)
+
+                last_page_response = response
+                last_page_url = response.request.url
+
+                next_page = response.urljoin(next_page)
+            
+                yield scrapy.Request(url=next_page,
+                                     callback=self.parse_au_detail,
+                                     cb_kwargs=dict(catalogue_page=catalogue_page, img_urls=img_urls, last_page_response=last_page_response))
 
     def parse_au_detail(self, response, catalogue_page, img_urls, last_page_response):
         next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
