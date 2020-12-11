@@ -31,11 +31,12 @@ Clicks,https://my-catalogue.co.za/clicks-specials,au-catalogues
 Countdown NZ,https://my-catalogue.nz/countdown-mailers,au-catalogues
 Warehouse Red,https://my-catalogue.nz/the-warehouse-mailers,au-catalogues
 Super Amart,https://au-catalogues.com/amart-furniture-specials,au-catalogues
+Macpac,https://www.tiendeo.com.au/sydney-nsw/macpac,tiendeo
 -------------,-------------,-------------
 WINC,https://www.winc.com.au/page/catalogues,winc
-Macpac,https://www.tiendeo.com.au/sydney-nsw/macpac,other
 Coles Express,https://www.colesexpress.com.au/special-offers.aspx,other
 -------------,-------------,-------------
+#[IGNORE]Macpac,https://www.tiendeo.com.au/sydney-nsw/macpac,other
 #[IGNORE]Pick N Pay,https://www.pnp.co.za/pnpstorefront/catalogues,other
 #[IGNORE]KMart NZ,http://www.kmart.co.nz/catalogue,other
 #[IGNORE]Shoprite,https://www.shoprite.co.za/specials.html,other

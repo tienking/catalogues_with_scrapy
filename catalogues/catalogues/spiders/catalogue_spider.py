@@ -32,7 +32,52 @@ class CatalogueSpider(scrapy.Spider):
                 yield scrapy.Request(url=catalogue_page["url"],
                                      callback=self.parse_au_cata,
                                     cb_kwargs=dict(catalogue_page=catalogue_page))
+            elif catalogue_page["download_page"] == "tiendeo-test":
+                yield scrapy.Request(url=catalogue_page["url"],
+                                     callback=self.parse_tiendeo_cata,
+                                    cb_kwargs=dict(catalogue_page=catalogue_page))
+
+    # ----------------------- <PENDING (IN PROCESS)> -------------------------------
+    def parse_tiendeo_cata(self, response, catalogue_page):
+        cata_all = response.xpath('//div[@id="products"]/ul/li')
+        for cata in cata_all:
+            bottom_title = cata.xpath('//div[@class="c·coupon__bottom"]/a/p/text()').get()
             
+            if bottom_title.upper().find("CATALOGUE") > -1:
+                cata_link = cata.xpath('//div[@class="c·coupon__bottom"]/a/@data-link').get()
+                cata_page = response.urljoin(cata_link)
+                
+                img_urls = []
+                yield scrapy.Request(url=next_page,
+                                     callback=self.parse_tiendeo_detail,
+                                     cb_kwargs=dict(catalogue_page=catalogue_page, img_urls=img_urls, last_page_response=None))
+
+    def parse_tiendeo_detail(self, response, catalogue_page, img_urls, last_page_response):
+        next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
+        if next_page is not None:
+            page = response.url.split("/")[-1]
+            root_url = response.css('a.ga-classic-leaflet::attr(href)').get()
+            img_url = response.css('img#leaflet::attr(src)').get()
+            img_path = response.urljoin(img_url)
+            
+            img_urls.append(img_path)
+            
+            last_page_response = response
+            last_page_url = response.request.url
+        
+            next_page = response.urljoin(next_page)
+
+            yield scrapy.Request(url=next_page,
+                                 callback=self.parse_au_detail,
+                                 cb_kwargs=dict(catalogue_page=catalogue_page, img_urls=img_urls, last_page_response=last_page_response))
+        else:
+            last_page_url = last_page_response.request.url
+            if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
+                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().replace("\n","").split(" - ")[:-1])
+                self.write_to_file(catalogue_page, last_page_name, img_urls, "jpg")
+                self.write_catalogue_history(catalogue_page["name"], last_page_url)
+    # ----------------------- </PENDING (IN PROCESS)> -------------------------------
+                
     def parse_au_cata(self, response, catalogue_page):
         cata_all = response.xpath('//div[@class="leaflet-detail"]/a[@class="leaflet-img-mobile-detail-flex"]/@href').getall()
         for cata in cata_all:
