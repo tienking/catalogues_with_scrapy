@@ -11,15 +11,14 @@ import requests
 import img2pdf
 import shutil
 import datetime
-#---Selenium---
-from selenium.webdriver.chrome.options import Options
-from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
 
-HISTORY_PATH = "./special-catalogue/download_history.json"
-CATALOGUE_INFO_PATH = abspath("./special-catalogue/images_info/")
-CATALOGUE_PATH = abspath("./special-catalogue/images/")
-WEB_PAGES_PATH = "./special-catalogue/special-catalogues.csv"
+# Get PATH conf
+from conf import PATH
+
+HISTORY_PATH = join(PATH["download_history_path"],"special_download_history.json")
+CATALOGUE_INFO_PATH = abspath(join(PATH["download_detail_path"],"special_images_info"))
+CATALOGUE_PATH = abspath(join(PATH["download_path"],"special_images"))
+WEB_PAGES_PATH = join(PATH["download_input_path"],"special-catalogues.csv")
 
 class CatalogueSpider(scrapy.Spider):
     name = 'special-catalogue'

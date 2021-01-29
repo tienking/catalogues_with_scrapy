@@ -12,12 +12,15 @@ import img2pdf
 import shutil
 import datetime
 
-HISTORY_PATH = "download_history.json"
-CATALOGUE_INFO_PATH = abspath("./images_info/")
-CATALOGUE_PATH = abspath("./images/")
-WEB_PAGES_PATH = "web_pages.csv"
+# Get PATH conf
+from conf import PATH
 
-class CatalogueSpider(scrapy.Spider):
+HISTORY_PATH = join(PATH["download_history_path"],"download_history.json")
+CATALOGUE_INFO_PATH = abspath(join(PATH["download_detail_path"],"images_info"))
+CATALOGUE_PATH = abspath(join(PATH["download_path"],"images"))
+WEB_PAGES_PATH = join(PATH["download_input_path"],"web_pages.csv")
+
+class SpecialCatalogueSpider(scrapy.Spider):
     name = 'catalogues'
     
     def __init__(self):
@@ -37,7 +40,7 @@ class CatalogueSpider(scrapy.Spider):
                                      callback=self.parse_tiendeo_cata,
                                     cb_kwargs=dict(catalogue_page=catalogue_page))
 
-    # ----------------------- <PENDING (IN PROCESS)> -------------------------------
+    # ---------------------------- <PENDING (IN PROCESS)> ----------------------------------
     def parse_tiendeo_cata(self, response, catalogue_page):
         cata_all = response.xpath('//div[@id="products"]/ul/li')
         for cata in cata_all:
@@ -76,7 +79,7 @@ class CatalogueSpider(scrapy.Spider):
                 last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().replace("\n","").split(" - ")[:-1])
                 self.write_to_file(catalogue_page, last_page_name, img_urls, "jpg")
                 self.write_catalogue_history(catalogue_page["name"], last_page_url)
-    # ----------------------- </PENDING (IN PROCESS)> -------------------------------
+    # ----------------------------- </PENDING (IN PROCESS)> ----------------------------------
                 
     def parse_au_cata(self, response, catalogue_page):
         cata_all = response.xpath('//div[@class="leaflet-detail"]/a[@class="leaflet-img-mobile-detail-flex"]/@href').getall()
