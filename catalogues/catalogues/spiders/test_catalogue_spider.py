@@ -15,13 +15,13 @@ import datetime
 # Get PATH conf
 from conf import PATH
 
-HISTORY_PATH = join(PATH["download_history_path"],"download_history.json")
-CATALOGUE_INFO_PATH = abspath(join(PATH["download_detail_path"],"images_info"))
-CATALOGUE_PATH = abspath(join(PATH["download_path"],"images"))
-WEB_PAGES_PATH = join(PATH["download_input_path"],"web_pages.csv")
+HISTORY_PATH = join(PATH["download_history_path"],"test_download_history.json")
+CATALOGUE_INFO_PATH = abspath(join(PATH["download_detail_path"],"test_images_info"))
+CATALOGUE_PATH = abspath(join(PATH["download_path"],"test_images"))
+WEB_PAGES_PATH = join(PATH["download_input_path"],"test_web_pages.csv")
 
 class SpecialCatalogueSpider(scrapy.Spider):
-    name = 'catalogues'
+    name = 'test_catalogues'
     
     def __init__(self):
         #---Catalogues---
@@ -34,6 +34,10 @@ class SpecialCatalogueSpider(scrapy.Spider):
             if catalogue_page["download_page"] == "au-catalogues":
                 yield scrapy.Request(url=catalogue_page["url"],
                                      callback=self.parse_au_cata,
+                                    cb_kwargs=dict(catalogue_page=catalogue_page))
+            elif catalogue_page["download_page"] == "tiendeo-test":
+                yield scrapy.Request(url=catalogue_page["url"],
+                                     callback=self.parse_tiendeo_cata,
                                     cb_kwargs=dict(catalogue_page=catalogue_page))
                 
     def parse_au_cata(self, response, catalogue_page):
@@ -162,8 +166,7 @@ class SpecialCatalogueSpider(scrapy.Spider):
         if not exists(CATALOGUE_PATH):
             makedirs(CATALOGUE_PATH)
         for download_img in self.download_imgs:
-            #cata_uni_name = download_img[1] + "_" + download_img[2]
-            cata_uni_name = download_img[2]
+            cata_uni_name = download_img[1] + "_" + download_img[2]
             output_path = join(CATALOGUE_PATH,download_img[0],cata_uni_name)
                 
             if exists(output_path):

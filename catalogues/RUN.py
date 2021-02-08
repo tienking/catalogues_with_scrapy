@@ -8,7 +8,7 @@ def import_or_install(package):
         pip.main(['install', package])
         
 def main():
-    package_list = ["scrapy", "img2pdf", "shutil"]
+    package_list = ["scrapy", "img2pdf"]
     for package in package_list:
         import_or_install(package)
     
