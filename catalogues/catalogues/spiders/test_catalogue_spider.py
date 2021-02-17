@@ -63,7 +63,9 @@ class SpecialCatalogueSpider(scrapy.Spider):
                 page = response.url.split("/")[-1]
                 root_element = response.xpath('//tr/td/a[@class="ga-classic-leaflet"]')
                 root_url = root_element.xpath('@href').get()
-                img_url = root_element.xpath('amp-img/@src').get()
+                img_url = root_element.xpath('img/@src').get()
+                if img_url is None:
+                    img_url = root_element.xpath('amp-img/@src').get()
                 img_path = response.urljoin(img_url)
                 
                 img_urls.append(img_path)
@@ -83,7 +85,9 @@ class SpecialCatalogueSpider(scrapy.Spider):
             page = response.url.split("/")[-1]
             root_element = response.xpath('//tr/td/a[@class="ga-classic-leaflet"]')
             root_url = root_element.xpath('@href').get()
-            img_url = root_element.xpath('amp-img/@src').get()
+            img_url = root_element.xpath('img/@src').get()
+            if img_url is None:
+                img_url = root_element.xpath('amp-img/@src').get()
             img_path = response.urljoin(img_url)
             
             img_urls.append(img_path)

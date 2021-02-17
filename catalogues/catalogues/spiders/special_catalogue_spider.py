@@ -62,8 +62,11 @@ class CatalogueSpider(scrapy.Spider):
         next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
         if next_page is not None:
             page = response.url.split("/")[-1]
-            root_url = response.css('a.ga-classic-leaflet::attr(href)').get()
-            img_url = response.css('img#leaflet::attr(src)').get()
+            root_element = response.xpath('//tr/td/a[@class="ga-classic-leaflet"]')
+            root_url = root_element.xpath('@href').get()
+            img_url = root_element.xpath('img/@src').get()
+            if img_url is None:
+                img_url = root_element.xpath('amp-img/@src').get()
             img_path = response.urljoin(img_url)
             
             img_urls.append(img_path)
