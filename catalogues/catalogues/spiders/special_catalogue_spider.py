@@ -19,6 +19,7 @@ HISTORY_PATH = join(PATH["download_history_path"],"special_download_history.json
 CATALOGUE_INFO_PATH = abspath(join(PATH["download_detail_path"],"special_images_info"))
 CATALOGUE_PATH = abspath(join(PATH["download_path"],"special_images"))
 WEB_PAGES_PATH = join(PATH["download_input_path"],"special-catalogues.csv")
+DOWNLOAD_ERROR_PATH = join(PATH["download_error_path"],"special_download_error.csv")
 
 class CatalogueSpider(scrapy.Spider):
     name = 'special-catalogue'
@@ -89,8 +90,8 @@ class CatalogueSpider(scrapy.Spider):
     def write_to_file(self, catalogue_page, cata_name, img_urls, download_ext):
         if not exists(CATALOGUE_INFO_PATH):
             makedirs(CATALOGUE_INFO_PATH)
-        with open(join(CATALOGUE_INFO_PATH, catalogue_page["name"] + ".csv"), "a", encoding='utf-8', newline="") as im_f:
-            out_reader = csv.writer(im_f)
+        with open(join(CATALOGUE_INFO_PATH, catalogue_page["name"] + ".csv"), "a", encoding='utf-8', newline="") as im_file:
+            out_writer = csv.writer(im_file)
             
             if type(img_urls) == list:
                 for img in img_urls:
@@ -170,6 +171,12 @@ class CatalogueSpider(scrapy.Spider):
                 print("---- ERROR ----\n" + download_img[0] + " : " + last_page_url + "\n---------------\n")
                 print(e)
                 print("---------------\n")
+                self.write_error_history(download_img[0], last_page_url, str(e).replace("\n", " "))
+
+    def write_error_history(self, cata_name, last_page_url, exception_detail):
+        with open(DOWNLOAD_ERROR_PATH, "a", encoding='utf-8', newline="") as err_file:
+            err_writer = csv.writer(err_file)
+            err_writer.writerow([str(datetime.datetime.now().date()),cata_name,last_page_url,exception_detail])
     
     def download_pdf(self, download_img, cata_name, output_path):
         r = requests.get(download_img[3], stream=True, headers={'User-agent': 'Mozilla/5.0'})
