@@ -27,7 +27,7 @@ class CatalogueSpider(scrapy.Spider):
         #---Catalogues---
         self.catalogue_pages = self.read_web_data()
         self.cata_history = self.read_history_data()
-        self.download_imgs = []
+        self.download_imgs = {}
     
     def start_requests(self):
         for catalogue_page in self.catalogue_pages:
@@ -82,9 +82,9 @@ class CatalogueSpider(scrapy.Spider):
         else:
             last_page_url = last_page_response.request.url
             if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
-                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().replace("\n","").split(" - ")[:-1])
-                self.write_to_file(catalogue_page, last_page_name, img_urls, "jpg")
-                self.write_catalogue_history(catalogue_page["name"], last_page_url)
+                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().strip().replace("\n","").split(" - ")[:-1])
+                self.write_to_file(catalogue_page, last_page_name, img_urls, last_page_url)
+                #self.write_catalogue_history(catalogue_page["name"], last_page_url)
 
     def write_to_file(self, catalogue_page, cata_name, img_urls, download_ext):
         if not exists(CATALOGUE_INFO_PATH):
@@ -115,11 +115,11 @@ class CatalogueSpider(scrapy.Spider):
 
     def closed(self, reason):
         if len(self.download_imgs) > 0:
-            with open(HISTORY_PATH, "w") as dh_file:
-                json.dump(self.cata_history, dh_file)
             print("---DOWNLOADING CATALOGUES---")
             self.download_catalogues()
             print("---DONE---")
+            with open(HISTORY_PATH, "w") as dh_file:
+                dh_file.write(json.dumps(self.cata_history, indent = 6))
             
     def read_history_data(self):
         his_data = None
@@ -148,24 +148,28 @@ class CatalogueSpider(scrapy.Spider):
     def download_catalogues(self):
         if not exists(CATALOGUE_PATH):
             makedirs(CATALOGUE_PATH)
-        for download_img in self.download_imgs:
-            cata_uni_name = download_img[1] + "_" + download_img[2]
-            output_path = join(CATALOGUE_PATH,download_img[0],cata_uni_name)
-                
-            if exists(output_path):
-                cata_index = 1
-                temp_path = output_path
-                while exists(temp_path):
-                    temp_path = output_path + "_" + str(cata_index)
-                    cata_index += 1
-                
-                output_path = temp_path
-            makedirs(output_path)
+        for last_page_url, download_img in self.download_imgs.items():
+            try:
+                cata_uni_name = download_img[2]
+                output_path = join(CATALOGUE_PATH,download_img[0],cata_uni_name)
+
+                if exists(output_path):
+                    cata_index = 1
+                    temp_path = output_path
+                    while exists(temp_path):
+                        temp_path = output_path + "_" + str(cata_index)
+                        cata_index += 1
                     
-            if download_img[-1] == "jpg":
+                    output_path = temp_path
+                makedirs(output_path)
+                        
                 self.download_jpg_to_pdf(download_img, download_img[2], output_path)
-            elif download_img[-1] == "pdf":
-                self.download_pdf(download_img, download_img[2], output_path)
+                self.write_catalogue_history(download_img[0], last_page_url)
+            except Exception as e:
+                shutil.rmtree(output_path, ignore_errors=True)
+                print("---- ERROR ----\n" + download_img[0] + " : " + last_page_url + "\n---------------\n")
+                print(e)
+                print("---------------\n")
     
     def download_pdf(self, download_img, cata_name, output_path):
         r = requests.get(download_img[3], stream=True, headers={'User-agent': 'Mozilla/5.0'})
