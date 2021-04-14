@@ -29,6 +29,7 @@ class SpecialCatalogueSpider(scrapy.Spider):
         self.catalogue_pages = self.read_web_data()
         self.cata_history = self.read_history_data()
         self.download_imgs = {}
+        self.error_cata = 0
     
     def start_requests(self):
         for catalogue_page in self.catalogue_pages:
@@ -58,11 +59,16 @@ class SpecialCatalogueSpider(scrapy.Spider):
             next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
             if next_page is not None:
                 page = response.url.split("/")[-1]
-                root_element = response.xpath('//tr/td/a[@class="ga-classic-leaflet"]')
-                root_url = root_element.xpath('@href').get()
+                root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
+                #root_url = root_element.xpath('@href').get()
                 img_url = root_element.xpath('img/@src').get()
                 if img_url is None:
                     img_url = root_element.xpath('amp-img/@src').get()
+                if img_url is None:
+                    root_element = response.xpath('//tr/td[@class="leaflet-detail-big leaflet-detail-big-without-recipe"]')
+                    img_url = root_element.xpath('img/@src').get()
+                    if img_url is None:
+                        img_url = root_element.xpath('amp-img/@src').get()
                 img_path = response.urljoin(img_url)
                 
                 img_urls.append(img_path)
@@ -80,13 +86,18 @@ class SpecialCatalogueSpider(scrapy.Spider):
         next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
         if next_page is not None:
             page = response.url.split("/")[-1]
-            root_element = response.xpath('//tr/td/a[@class="ga-classic-leaflet"]')
-            root_url = root_element.xpath('@href').get()
+            root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
+            #root_url = root_element.xpath('@href').get()
             img_url = root_element.xpath('img/@src').get()
             if img_url is None:
                 img_url = root_element.xpath('amp-img/@src').get()
+            if img_url is None:
+                root_element = response.xpath('//tr/td[@class="leaflet-detail-big leaflet-detail-big-without-recipe"]')
+                img_url = root_element.xpath('img/@src').get()
+                if img_url is None:
+                    img_url = root_element.xpath('amp-img/@src').get()
             img_path = response.urljoin(img_url)
-            
+
             img_urls.append(img_path)
             
             last_page_response = response
@@ -132,12 +143,28 @@ class SpecialCatalogueSpider(scrapy.Spider):
             self.cata_history[cata_name].append(last_page_url)
 
     def closed(self, reason):
+        
         if len(self.download_imgs) > 0:
             print("---DOWNLOADING CATALOGUES---")
             self.download_catalogues()
             print("---DONE---")
+
             with open(HISTORY_PATH, "w") as dh_file:
                 dh_file.write(json.dumps(self.cata_history, indent = 6))
+                
+        if self.error_cata == 0:
+            print("\n")
+            print("\t\t---------------------------------------")
+            print("\t\t--- DOWNLOAD COMPLETE WITH NO ERROR ---")
+            print("\t\t---------------------------------------")
+            print("\n")
+        else:
+            print("\n")
+            print("\t\t-----------------------------------------------------")
+            print("\t\t---- DOWNLOAD COMPLETE WITH {0} ERROR CATALOGUE(S) ----".format(self.error_cata))
+            print("\t\t------ Please check download_error folder !!!! ------")
+            print("\t\t-----------------------------------------------------")
+            print("\n")
             
     def read_history_data(self):
         his_data = None
@@ -189,6 +216,7 @@ class SpecialCatalogueSpider(scrapy.Spider):
                 print(e)
                 print("---------------\n")
                 self.write_error_history(download_img[0], last_page_url, str(e).replace("\n", " "))
+                self.error_cata += 1
 
     def write_error_history(self, cata_name, last_page_url, exception_detail):
         with open(DOWNLOAD_ERROR_PATH, "a", encoding='utf-8', newline="") as err_file:
