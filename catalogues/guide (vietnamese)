@@ -1,0 +1,21 @@
+[ HƯỚNG DẪN SỬ DỤNG ]
+
+Sử dụng file RUN.py để chạy (các thư viện đi kèm sẽ được download nếu thiếu).
+	1. RUN chức năng số 1 để lấy các catalogue available hiện tại từ 2 trang au-catalogues.com và my-catalogue.nz.
+		File cấu hình cho các catalogue sẽ ở file ./download_input/web_pages.csv. 3 cột bao gồm:
+			Tên catalogue: dùng để tạo thư mục lúc download và để lưu trữ lịch sử các catalogues đã download
+			Địa chỉ trang download: mặc định theo cấu trúc đã cho
+			Cách chạy: au-catalogues là cách chạy mặc định, hiện tại chưa update cách chạy khác
+		Lịch sử download được lưu trong file ./download_history/download_history.json. Đây là file để ghi nhận các catalogue đã download, tránh download lại.
+		Lịch sử download chi tiết được lưu trong thư mục ./download_detail/images_info. Các file trong thư mục này không ảnh hưởng tới chương trình.
+	2. RUN chức năng số 2 để lấy duy nhất 1 catalogue hoặc lấy toàn bộ catalogue theo 1 brand từ 2 trang au-catalogues.com và my-catalogue.nz
+		File cấu hình cho các catalogue sẽ ở file ./download_input/special-catalogues.csv. 3 cột bao gồm:
+			Tên catalogue: dùng để tạo thư mục lúc download và để lưu trữ lịch sử các catalogues đã download
+			Địa chỉ trang download: mặc định theo cấu trúc đã cho
+			Cách chạy: au-catalogues-all để down toàn bộ catalogues (trang web chứa toàn bộ catalogues)
+						au-catalogues-one để down duy nhất 1 catalogue (trang web chứa catalogue)
+		Lịch sử download được lưu trong file ./download_history/special_download_history.json. Đây là file để ghi nhận các catalogue đã download, tránh download lại.
+		Lịch sử download chi tiết được lưu trong thư mục ./download_detail/special_images_info. Các file trong thư mục này không ảnh hưởng tới chương trình.
+
+Sau khi chạy xong, catalogues được download sẽ nằm ở trong thư mục ./download	
+File cấu hình cho 2 chức năng chạy (2 spiders trong Scrapy) nằm ở trong thư mục ./catalogues/spiders

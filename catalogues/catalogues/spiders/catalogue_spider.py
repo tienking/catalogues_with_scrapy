@@ -10,18 +10,33 @@ from os import makedirs, listdir
 import requests
 import img2pdf
 import shutil
-import datetime
+from datetime import datetime, timedelta
 
 # Get PATH conf
 from conf import PATH
 
+def get_next_monday():
+    # Get next Monday from current date
+    cur_time = datetime.now()
+    last_monday = cur_time - timedelta(days=cur_time.weekday())
+    last_monday = last_monday.replace(hour=9, minute=0)
+    date_range = cur_time - last_monday
+    # Check today is Monday (time before 8h00 AM)
+    if date_range.days == -1:
+        next_monday_folder = last_monday.strftime("%Y%m%d")
+    else:
+        next_monday = cur_time - timedelta(days=cur_time.weekday()-7)
+        next_monday_folder = next_monday.strftime("%Y%m%d")
+    
+    return next_monday_folder
+
 HISTORY_PATH = join(PATH["download_history_path"],"download_history.json")
 CATALOGUE_INFO_PATH = abspath(join(PATH["download_detail_path"],"images_info"))
-CATALOGUE_PATH = abspath(join(PATH["download_path"],"images"))
+CATALOGUE_PATH = abspath(join(PATH["download_path"],"images","{0}".format(get_next_monday())))
 WEB_PAGES_PATH = join(PATH["download_input_path"],"web_pages.csv")
 DOWNLOAD_ERROR_PATH = join(PATH["download_error_path"],"download_error.csv")
 
-class SpecialCatalogueSpider(scrapy.Spider):
+class CatalogueSpider(scrapy.Spider):
     name = 'catalogues'
     
     def __init__(self):
@@ -60,17 +75,28 @@ class SpecialCatalogueSpider(scrapy.Spider):
             if next_page is not None:
                 page = response.url.split("/")[-1]
                 root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
-                #root_url = root_element.xpath('@href').get()
+                
+                img_url = root_element.xpath('a/amp-img/img/@src').get()
+            if img_url is None:
+                img_url = root_element.xpath('a/amp-img/@src').get()
+            if img_url is None:
+                img_url = root_element.xpath('a/img/@src').get()
+            if img_url is None:
                 img_url = root_element.xpath('img/@src').get()
-                if img_url is None:
-                    img_url = root_element.xpath('amp-img/@src').get()
+            if img_url is None:
+                img_url = root_element.xpath('amp-img/@src').get()
                 if img_url is None:
                     root_element = response.xpath('//tr/td[@class="leaflet-detail-big leaflet-detail-big-without-recipe"]')
                     img_url = root_element.xpath('img/@src').get()
                     if img_url is None:
                         img_url = root_element.xpath('amp-img/@src').get()
-                img_path = response.urljoin(img_url)
                 
+                #img_src_list = [img_src.strip().split(" ")[0] for img_src in img_url.split(",")]
+                #img_res_list = [int(img_src.strip().split(" ")[1]) for img_src in img_url.split(",")]
+                
+                #img_url = img_src_list[img_res_list.index(max(img_res_list))]
+                #img_url = img_url.split(",")[-1].strip().split(" ")[0]
+                img_path = response.urljoin(img_url)
                 img_urls.append(img_path)
 
                 last_page_response = response
@@ -87,8 +113,13 @@ class SpecialCatalogueSpider(scrapy.Spider):
         if next_page is not None:
             page = response.url.split("/")[-1]
             root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
-            #root_url = root_element.xpath('@href').get()
-            img_url = root_element.xpath('img/@src').get()
+            img_url = root_element.xpath('a/amp-img/img/@src').get()
+            if img_url is None:
+                img_url = root_element.xpath('a/amp-img/@src').get()
+            if img_url is None:
+                img_url = root_element.xpath('a/img/@src').get()
+            if img_url is None:
+                img_url = root_element.xpath('img/@src').get()
             if img_url is None:
                 img_url = root_element.xpath('amp-img/@src').get()
             if img_url is None:
@@ -96,8 +127,13 @@ class SpecialCatalogueSpider(scrapy.Spider):
                 img_url = root_element.xpath('img/@src').get()
                 if img_url is None:
                     img_url = root_element.xpath('amp-img/@src').get()
+                    
+            #img_src_list = [img_src.strip().split(" ")[0] for img_src in img_url.split(",")]
+            #img_res_list = [int(img_src.strip().split(" ")[1]) for img_src in img_url.split(",")]
+            
+            #img_url = img_src_list[img_res_list.index(max(img_res_list))]
+            #img_url = img_url.split(",")[-1].strip().split(" ")[0]
             img_path = response.urljoin(img_url)
-
             img_urls.append(img_path)
             
             last_page_response = response
@@ -123,10 +159,10 @@ class SpecialCatalogueSpider(scrapy.Spider):
             
             if type(img_urls) == list:
                 for img in img_urls:
-                    out_writer.writerow([str(datetime.datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],last_page_name,img])
+                    out_writer.writerow([str(datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],last_page_name,img])
             else:
-                out_writer.writerow([str(datetime.datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],last_page_name,img_urls])
-            self.download_imgs[last_page_url] = ([catalogue_page["name"],str(datetime.datetime.now().date()),last_page_name,img_urls])
+                out_writer.writerow([str(datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],last_page_name,img_urls])
+            self.download_imgs[last_page_url] = ([catalogue_page["name"],str(datetime.now().date()),last_page_name,img_urls])
 
     def check_catalogue_exists(self, cata_name, last_page_url):
         if cata_name not in self.cata_history.keys():
@@ -136,34 +172,28 @@ class SpecialCatalogueSpider(scrapy.Spider):
         else:
             return True
 
-    def write_catalogue_history(self, cata_name, last_page_url):
-        if cata_name not in self.cata_history.keys():
-            self.cata_history[cata_name] = [last_page_url]
-        else:
-            self.cata_history[cata_name].append(last_page_url)
-
     def closed(self, reason):
         
         if len(self.download_imgs) > 0:
-            print("---DOWNLOADING CATALOGUES---")
+            print("\t>> DOWNLOADING CATALOGUES...\n")
             self.download_catalogues()
-            print("---DONE---")
+            print("\t[DONE]\n")
 
             with open(HISTORY_PATH, "w") as dh_file:
                 dh_file.write(json.dumps(self.cata_history, indent = 6))
                 
         if self.error_cata == 0:
             print("\n")
-            print("\t\t---------------------------------------")
-            print("\t\t--- DOWNLOAD COMPLETE WITH NO ERROR ---")
-            print("\t\t---------------------------------------")
+            print("\t----------------------------------------------------")
+            print("\t--------- DOWNLOAD COMPLETED WITH NO ERROR ---------")
+            print("\t----------------------------------------------------")
             print("\n")
         else:
             print("\n")
-            print("\t\t-----------------------------------------------------")
-            print("\t\t---- DOWNLOAD COMPLETE WITH {0} ERROR CATALOGUE(S) ----".format(self.error_cata))
-            print("\t\t------ Please check download_error folder !!!! ------")
-            print("\t\t-----------------------------------------------------")
+            print("\t----------------------------------------------------")
+            print("\t--- DOWNLOAD COMPLETED WITH {0} ERROR CATALOGUE(S) ---".format(self.error_cata))
+            print("\t------ Please check download_error folder !!!! -----")
+            print("\t----------------------------------------------------")
             print("\n")
             
     def read_history_data(self):
@@ -209,19 +239,26 @@ class SpecialCatalogueSpider(scrapy.Spider):
                 makedirs(output_path)
                         
                 self.download_jpg_to_pdf(download_img, download_img[2], output_path)
+                print("\t[SUCCESS]: {0}".format(cata_uni_name))
+                print("\t---------------\n")
                 self.write_catalogue_history(download_img[0], last_page_url)
             except Exception as e:
                 shutil.rmtree(output_path, ignore_errors=True)
-                print("---- ERROR ----\n" + download_img[0] + " : " + last_page_url + "\n---------------\n")
-                print(e)
-                print("---------------\n")
+                print("\t[ERROR]: {0}".format(cata_uni_name))
+                print("\t---------------\n")
                 self.write_error_history(download_img[0], last_page_url, str(e).replace("\n", " "))
                 self.error_cata += 1
+
+    def write_catalogue_history(self, cata_name, last_page_url):
+        if cata_name not in self.cata_history.keys():
+            self.cata_history[cata_name] = [last_page_url]
+        else:
+            self.cata_history[cata_name].append(last_page_url)
 
     def write_error_history(self, cata_name, last_page_url, exception_detail):
         with open(DOWNLOAD_ERROR_PATH, "a", encoding='utf-8', newline="") as err_file:
             err_writer = csv.writer(err_file)
-            err_writer.writerow([str(datetime.datetime.now().date()),cata_name,last_page_url,exception_detail])
+            err_writer.writerow([str(datetime.now().date()),cata_name,last_page_url,exception_detail])
 
     def download_jpg_to_pdf(self, download_img, cata_name, output_path):
         index = 1

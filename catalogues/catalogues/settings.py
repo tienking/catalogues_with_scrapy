@@ -8,10 +8,9 @@
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 BOT_NAME = 'catalogues'
-
+#LOG_LEVEL = 'INFO'
 SPIDER_MODULES = ['catalogues.spiders']
 NEWSPIDER_MODULE = 'catalogues.spiders'
-
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'catalogues (+http://www.yourdomain.com)'

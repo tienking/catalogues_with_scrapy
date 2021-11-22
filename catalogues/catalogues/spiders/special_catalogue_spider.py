@@ -21,7 +21,7 @@ CATALOGUE_PATH = abspath(join(PATH["download_path"],"special_images"))
 WEB_PAGES_PATH = join(PATH["download_input_path"],"special-catalogues.csv")
 DOWNLOAD_ERROR_PATH = join(PATH["download_error_path"],"special_download_error.csv")
 
-class CatalogueSpider(scrapy.Spider):
+class SpecialCatalogueSpider(scrapy.Spider):
     name = 'special-catalogue'
     
     def __init__(self):
@@ -29,6 +29,7 @@ class CatalogueSpider(scrapy.Spider):
         self.catalogue_pages = self.read_web_data()
         self.cata_history = self.read_history_data()
         self.download_imgs = {}
+        self.error_cata = 0
     
     def start_requests(self):
         for catalogue_page in self.catalogue_pages:
@@ -63,7 +64,7 @@ class CatalogueSpider(scrapy.Spider):
         next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
         if next_page is not None:
             page = response.url.split("/")[-1]
-            root_element = response.xpath('//tr/td/a[@class="ga-classic-leaflet"]')
+            root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
             #root_url = root_element.xpath('@href').get()
             img_url = root_element.xpath('img/@src').get()
             if img_url is None:
@@ -74,7 +75,7 @@ class CatalogueSpider(scrapy.Spider):
                 if img_url is None:
                     img_url = root_element.xpath('amp-img/@src').get()
             img_path = response.urljoin(img_url)
-            
+
             img_urls.append(img_path)
             
             last_page_response = response
