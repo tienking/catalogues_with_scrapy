@@ -54,48 +54,34 @@ class CatalogueSpider(scrapy.Spider):
                                     cb_kwargs=dict(catalogue_page=catalogue_page))
 
     def parse_au_cata(self, response, catalogue_page):
-        cata_all = response.xpath('//div[@class="leaflet-detail"]/a[@class="leaflet-img-mobile-detail-flex"]/@href').getall()
+        cata_all = response.xpath('//div[@class="leaflet-detail"]/a[@class="leaflet-img-mobile-detail-flex"]/@href').extract()
+
         for cata in cata_all:
             cata_page = response.urljoin(cata)
             yield scrapy.Request(url=cata_page,
                                  callback=self.check_last_page_exists,
-                                cb_kwargs=dict(catalogue_page=catalogue_page))
+                                cb_kwargs=dict(catalogue_page=catalogue_page, first_page=cata_page))
 
-    def check_last_page_exists(self, response, catalogue_page):
-        last_page_url = response.urljoin(response.xpath('//div[@class="numbers"]/a/@href')[-1].get())
-        
-        last_page_url_list = last_page_url.split("-")
-        last_page_url_list[-1] = str(int(last_page_url_list[-1]) - 1)
-        last_page_url = "-".join(last_page_url_list)
+    def check_last_page_exists(self, response, catalogue_page, first_page):
+        page_count = int(response.xpath('//div[@class="numbers"]/a/text()').extract()[-1]) - 1
+        last_page_url = "-".join(first_page.split("-")[:-1]) + "-" + str(page_count)
         
         if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
             img_urls = []
             
-            next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
+            next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').extract_first()
             if next_page is not None:
-                page = response.url.split("/")[-1]
                 root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
-                
-                img_url = root_element.xpath('a/amp-img/img/@src').get()
-            if img_url is None:
-                img_url = root_element.xpath('a/amp-img/@src').get()
-            if img_url is None:
-                img_url = root_element.xpath('a/img/@src').get()
-            if img_url is None:
-                img_url = root_element.xpath('img/@src').get()
-            if img_url is None:
-                img_url = root_element.xpath('amp-img/@src').get()
+                img_url = root_element.css("picture img::attr(src)").extract_first()
                 if img_url is None:
-                    root_element = response.xpath('//tr/td[@class="leaflet-detail-big leaflet-detail-big-without-recipe"]')
-                    img_url = root_element.xpath('img/@src').get()
-                    if img_url is None:
-                        img_url = root_element.xpath('amp-img/@src').get()
+                    img_url = root_element.css("a amp-img::attr(src)").extract_first()
+                if img_url is None:
+                    img_url = root_element.css("a img::attr(src)").extract_first()
+                if img_url is None:
+                    img_url = root_element.css("img::attr(src)").extract_first()
+                if img_url is None:
+                    img_url = root_element.css("amp-img::attr(src)").extract_first()
                 
-                #img_src_list = [img_src.strip().split(" ")[0] for img_src in img_url.split(",")]
-                #img_res_list = [int(img_src.strip().split(" ")[1]) for img_src in img_url.split(",")]
-                
-                #img_url = img_src_list[img_res_list.index(max(img_res_list))]
-                #img_url = img_url.split(",")[-1].strip().split(" ")[0]
                 img_path = response.urljoin(img_url)
                 img_urls.append(img_path)
 
@@ -111,28 +97,17 @@ class CatalogueSpider(scrapy.Spider):
     def parse_au_detail(self, response, catalogue_page, img_urls, last_page_response):
         next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
         if next_page is not None:
-            page = response.url.split("/")[-1]
             root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
-            img_url = root_element.xpath('a/amp-img/img/@src').get()
+            img_url = root_element.css("picture img::attr(src)").extract_first()
             if img_url is None:
-                img_url = root_element.xpath('a/amp-img/@src').get()
+                img_url = root_element.css("a amp-img::attr(src)").extract_first()
             if img_url is None:
-                img_url = root_element.xpath('a/img/@src').get()
+                img_url = root_element.css("a img::attr(src)").extract_first()
             if img_url is None:
-                img_url = root_element.xpath('img/@src').get()
+                img_url = root_element.css("img::attr(src)").extract_first()
             if img_url is None:
-                img_url = root_element.xpath('amp-img/@src').get()
-            if img_url is None:
-                root_element = response.xpath('//tr/td[@class="leaflet-detail-big leaflet-detail-big-without-recipe"]')
-                img_url = root_element.xpath('img/@src').get()
-                if img_url is None:
-                    img_url = root_element.xpath('amp-img/@src').get()
-                    
-            #img_src_list = [img_src.strip().split(" ")[0] for img_src in img_url.split(",")]
-            #img_res_list = [int(img_src.strip().split(" ")[1]) for img_src in img_url.split(",")]
-            
-            #img_url = img_src_list[img_res_list.index(max(img_res_list))]
-            #img_url = img_url.split(",")[-1].strip().split(" ")[0]
+                img_url = root_element.css("amp-img::attr(src)").extract_first()
+               
             img_path = response.urljoin(img_url)
             img_urls.append(img_path)
             
@@ -147,7 +122,7 @@ class CatalogueSpider(scrapy.Spider):
         else:
             last_page_url = last_page_response.request.url
             if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
-                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().strip().replace("\n","").split(" - ")[:-1])
+                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().strip().replace("\n","").replace("/","").split(" - ")[:-1])
                 self.write_to_file(catalogue_page, last_page_name, img_urls, last_page_url)
                 #self.write_catalogue_history(catalogue_page["name"], last_page_url)
 

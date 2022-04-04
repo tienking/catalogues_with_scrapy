@@ -84,7 +84,8 @@ def main(scrapy_arg, option=None):
     if option == None:
         print("\n\t1. Get all new catalogues.")
         print("\t2. Get only catalogue or all catalogues from one brand")
-        print("\t3. Exit")
+        print("\t3. Run test-catalogue")
+        print("\t4. Exit")
         option = input("\n\tEnter: ")
 
     while True:
@@ -97,6 +98,9 @@ def main(scrapy_arg, option=None):
             subprocess.call(["scrapy", "crawl", "special-catalogue"])
             print("\n\t********************** FINISH **********************")
         elif option == "3":
+            subprocess.call(["scrapy", "crawl", "test-catalogue"])
+            print("\n\t********************** FINISH **********************")
+        elif option == "4":
             return None
         else:
             print("Wrong number")

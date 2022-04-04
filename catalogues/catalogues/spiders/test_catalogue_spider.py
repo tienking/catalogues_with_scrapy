@@ -10,24 +10,41 @@ from os import makedirs, listdir
 import requests
 import img2pdf
 import shutil
-import datetime
+from datetime import datetime, timedelta
 
 # Get PATH conf
 from conf import PATH
 
+def get_next_monday():
+    # Get next Monday from current date
+    cur_time = datetime.now()
+    last_monday = cur_time - timedelta(days=cur_time.weekday())
+    last_monday = last_monday.replace(hour=9, minute=0)
+    date_range = cur_time - last_monday
+    # Check today is Monday (time before 8h00 AM)
+    if date_range.days == -1:
+        next_monday_folder = last_monday.strftime("%Y%m%d")
+    else:
+        next_monday = cur_time - timedelta(days=cur_time.weekday()-7)
+        next_monday_folder = next_monday.strftime("%Y%m%d")
+    
+    return next_monday_folder
+
 HISTORY_PATH = join(PATH["download_history_path"],"test_download_history.json")
 CATALOGUE_INFO_PATH = abspath(join(PATH["download_detail_path"],"test_images_info"))
-CATALOGUE_PATH = abspath(join(PATH["download_path"],"test_images"))
+CATALOGUE_PATH = abspath(join(PATH["download_path"],"test_images","{0}".format(get_next_monday())))
 WEB_PAGES_PATH = join(PATH["download_input_path"],"test_web_pages.csv")
+DOWNLOAD_ERROR_PATH = join(PATH["download_error_path"],"test_download_error.csv")
 
-class SpecialCatalogueSpider(scrapy.Spider):
-    name = 'test_catalogues'
+class CatalogueSpider(scrapy.Spider):
+    name = 'test-catalogue'
     
     def __init__(self):
         #---Catalogues---
         self.catalogue_pages = self.read_web_data()
         self.cata_history = self.read_history_data()
-        self.download_imgs = []
+        self.download_imgs = {}
+        self.error_cata = 0
     
     def start_requests(self):
         for catalogue_page in self.catalogue_pages:
@@ -35,39 +52,37 @@ class SpecialCatalogueSpider(scrapy.Spider):
                 yield scrapy.Request(url=catalogue_page["url"],
                                      callback=self.parse_au_cata,
                                     cb_kwargs=dict(catalogue_page=catalogue_page))
-            elif catalogue_page["download_page"] == "tiendeo-test":
-                yield scrapy.Request(url=catalogue_page["url"],
-                                     callback=self.parse_tiendeo_cata,
-                                    cb_kwargs=dict(catalogue_page=catalogue_page))
-                
+
     def parse_au_cata(self, response, catalogue_page):
-        cata_all = response.xpath('//div[@class="leaflet-detail"]/a[@class="leaflet-img-mobile-detail-flex"]/@href').getall()
+        cata_all = response.xpath('//div[@class="leaflet-detail"]/a[@class="leaflet-img-mobile-detail-flex"]/@href').extract()
+        print(cata_all)
         for cata in cata_all:
             cata_page = response.urljoin(cata)
             yield scrapy.Request(url=cata_page,
                                  callback=self.check_last_page_exists,
-                                cb_kwargs=dict(catalogue_page=catalogue_page))
+                                cb_kwargs=dict(catalogue_page=catalogue_page, first_page=cata_page))
 
-    def check_last_page_exists(self, response, catalogue_page):
-        last_page_url = response.urljoin(response.xpath('//div[@class="numbers"]/a/@href')[-1].get())
-        
-        last_page_url_list = last_page_url.split("-")
-        last_page_url_list[-1] = str(int(last_page_url_list[-1]) - 1)
-        last_page_url = "-".join(last_page_url_list)
+    def check_last_page_exists(self, response, catalogue_page, first_page):
+        page_count = int(response.xpath('//div[@class="numbers"]/a/text()').extract()[-1]) - 1
+        last_page_url = "-".join(first_page.split("-")[:-1]) + "-" + str(page_count)
         
         if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
             img_urls = []
             
-            next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
+            next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').extract_first()
             if next_page is not None:
-                page = response.url.split("/")[-1]
-                root_element = response.xpath('//tr/td/a[@class="ga-classic-leaflet"]')
-                root_url = root_element.xpath('@href').get()
-                img_url = root_element.xpath('img/@src').get()
+                root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
+                img_url = root_element.css("picture img::attr(src)").extract_first()
                 if img_url is None:
-                    img_url = root_element.xpath('amp-img/@src').get()
-                img_path = response.urljoin(img_url)
+                    img_url = root_element.css("a amp-img::attr(src)").extract_first()
+                if img_url is None:
+                    img_url = root_element.css("a img::attr(src)").extract_first()
+                if img_url is None:
+                    img_url = root_element.css("img::attr(src)").extract_first()
+                if img_url is None:
+                    img_url = root_element.css("amp-img::attr(src)").extract_first()
                 
+                img_path = response.urljoin(img_url)
                 img_urls.append(img_path)
 
                 last_page_response = response
@@ -82,19 +97,23 @@ class SpecialCatalogueSpider(scrapy.Spider):
     def parse_au_detail(self, response, catalogue_page, img_urls, last_page_response):
         next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
         if next_page is not None:
-            page = response.url.split("/")[-1]
-            root_element = response.xpath('//tr/td/a[@class="ga-classic-leaflet"]')
-            root_url = root_element.xpath('@href').get()
-            img_url = root_element.xpath('img/@src').get()
+            root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
+            img_url = root_element.css("picture img::attr(src)").extract_first()
             if img_url is None:
-                img_url = root_element.xpath('amp-img/@src').get()
+                img_url = root_element.css("a amp-img::attr(src)").extract_first()
+            if img_url is None:
+                img_url = root_element.css("a img::attr(src)").extract_first()
+            if img_url is None:
+                img_url = root_element.css("img::attr(src)").extract_first()
+            if img_url is None:
+                img_url = root_element.css("amp-img::attr(src)").extract_first()
+               
             img_path = response.urljoin(img_url)
-            
             img_urls.append(img_path)
             
             last_page_response = response
             last_page_url = response.request.url
-        
+
             next_page = response.urljoin(next_page)
 
             yield scrapy.Request(url=next_page,
@@ -103,22 +122,22 @@ class SpecialCatalogueSpider(scrapy.Spider):
         else:
             last_page_url = last_page_response.request.url
             if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
-                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().strip().replace("\n","").split(" - ")[:-1])
-                self.write_to_file(catalogue_page, last_page_name, img_urls, "jpg")
-                self.write_catalogue_history(catalogue_page["name"], last_page_url)
+                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().strip().replace("\n","").replace("/","").split(" - ")[:-1])
+                self.write_to_file(catalogue_page, last_page_name, img_urls, last_page_url)
+                #self.write_catalogue_history(catalogue_page["name"], last_page_url)
 
-    def write_to_file(self, catalogue_page, cata_name, img_urls, download_ext):
+    def write_to_file(self, catalogue_page, last_page_name, img_urls, last_page_url):
         if not exists(CATALOGUE_INFO_PATH):
             makedirs(CATALOGUE_INFO_PATH)
-        with open(join(CATALOGUE_INFO_PATH, catalogue_page["name"] + ".csv"), "a", encoding='utf-8', newline="") as im_f:
-            out_reader = csv.writer(im_f)
+        with open(join(CATALOGUE_INFO_PATH, catalogue_page["name"] + ".csv"), "a", encoding='utf-8', newline="") as im_file:
+            out_writer = csv.writer(im_file)
             
             if type(img_urls) == list:
                 for img in img_urls:
-                    out_reader.writerow([str(datetime.datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],cata_name,img])
+                    out_writer.writerow([str(datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],last_page_name,img])
             else:
-                out_reader.writerow([str(datetime.datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],cata_name,img_urls])
-            self.download_imgs.append([catalogue_page["name"],str(datetime.datetime.now().date()),cata_name,img_urls,download_ext])
+                out_writer.writerow([str(datetime.now().date()),catalogue_page["name"],catalogue_page["url"],catalogue_page["download_page"],last_page_name,img_urls])
+            self.download_imgs[last_page_url] = ([catalogue_page["name"],str(datetime.now().date()),last_page_name,img_urls])
 
     def check_catalogue_exists(self, cata_name, last_page_url):
         if cata_name not in self.cata_history.keys():
@@ -127,20 +146,30 @@ class SpecialCatalogueSpider(scrapy.Spider):
             return False
         else:
             return True
-            
-    def write_catalogue_history(self, cata_name, last_page_url):
-        if cata_name not in self.cata_history.keys():
-            self.cata_history[cata_name] = [last_page_url]
-        else:
-            self.cata_history[cata_name].append(last_page_url)
 
     def closed(self, reason):
+        
         if len(self.download_imgs) > 0:
+            print("\t>> DOWNLOADING CATALOGUES...\n")
+            self.download_catalogues()
+            print("\t[DONE]\n")
+
             with open(HISTORY_PATH, "w") as dh_file:
                 dh_file.write(json.dumps(self.cata_history, indent = 6))
-            print("---DOWNLOADING CATALOGUES---")
-            self.download_catalogues()
-            print("---DONE---")
+                
+        if self.error_cata == 0:
+            print("\n")
+            print("\t----------------------------------------------------")
+            print("\t--------- DOWNLOAD COMPLETED WITH NO ERROR ---------")
+            print("\t----------------------------------------------------")
+            print("\n")
+        else:
+            print("\n")
+            print("\t----------------------------------------------------")
+            print("\t--- DOWNLOAD COMPLETED WITH {0} ERROR CATALOGUE(S) ---".format(self.error_cata))
+            print("\t------ Please check download_error folder !!!! -----")
+            print("\t----------------------------------------------------")
+            print("\n")
             
     def read_history_data(self):
         his_data = None
@@ -169,32 +198,43 @@ class SpecialCatalogueSpider(scrapy.Spider):
     def download_catalogues(self):
         if not exists(CATALOGUE_PATH):
             makedirs(CATALOGUE_PATH)
-        for download_img in self.download_imgs:
-            cata_uni_name = download_img[1] + "_" + download_img[2]
-            output_path = join(CATALOGUE_PATH,download_img[0],cata_uni_name)
-                
-            if exists(output_path):
-                cata_index = 1
-                temp_path = output_path
-                while exists(temp_path):
-                    temp_path = output_path + "_" + str(cata_index)
-                    cata_index += 1
-                
-                output_path = temp_path
-            makedirs(output_path)
+        for last_page_url, download_img in self.download_imgs.items():
+            try:
+                cata_uni_name = download_img[2]
+                output_path = join(CATALOGUE_PATH,download_img[0],cata_uni_name)
+
+                if exists(output_path):
+                    cata_index = 1
+                    temp_path = output_path
+                    while exists(temp_path):
+                        temp_path = output_path + "_" + str(cata_index)
+                        cata_index += 1
                     
-            if download_img[-1] == "jpg":
+                    output_path = temp_path
+                makedirs(output_path)
+                        
                 self.download_jpg_to_pdf(download_img, download_img[2], output_path)
-            elif download_img[-1] == "pdf":
-                self.download_pdf(download_img, download_img[2], output_path)
-    
-    def download_pdf(self, download_img, cata_name, output_path):
-        r = requests.get(download_img[3], stream=True, headers={'User-agent': 'Mozilla/5.0'})
-        if r.status_code == 200:
-            with open(join(output_path, cata_name + ".pdf"), 'wb') as f:
-                r.raw.decode_content = True
-                shutil.copyfileobj(r.raw, f)
-    
+                print("\t[SUCCESS]: {0}".format(cata_uni_name))
+                print("\t---------------\n")
+                self.write_catalogue_history(download_img[0], last_page_url)
+            except Exception as e:
+                shutil.rmtree(output_path, ignore_errors=True)
+                print("\t[ERROR]: {0}".format(cata_uni_name))
+                print("\t---------------\n")
+                self.write_error_history(download_img[0], last_page_url, str(e).replace("\n", " "))
+                self.error_cata += 1
+
+    def write_catalogue_history(self, cata_name, last_page_url):
+        if cata_name not in self.cata_history.keys():
+            self.cata_history[cata_name] = [last_page_url]
+        else:
+            self.cata_history[cata_name].append(last_page_url)
+
+    def write_error_history(self, cata_name, last_page_url, exception_detail):
+        with open(DOWNLOAD_ERROR_PATH, "a", encoding='utf-8', newline="") as err_file:
+            err_writer = csv.writer(err_file)
+            err_writer.writerow([str(datetime.now().date()),cata_name,last_page_url,exception_detail])
+
     def download_jpg_to_pdf(self, download_img, cata_name, output_path):
         index = 1
         for img_url in download_img[3]:

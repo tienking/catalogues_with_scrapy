@@ -63,19 +63,18 @@ class SpecialCatalogueSpider(scrapy.Spider):
     def parse_au_detail(self, response, catalogue_page, img_urls, last_page_response):
         next_page = response.xpath('//div[@class="numbers"]/a[@rel="next"]/@href').get()
         if next_page is not None:
-            page = response.url.split("/")[-1]
             root_element = response.xpath('//tr/td[@class="leaflet-detail-big monitoring-leaflet"]')
-            #root_url = root_element.xpath('@href').get()
-            img_url = root_element.xpath('img/@src').get()
+            img_url = root_element.css("picture img::attr(src)").extract_first()
             if img_url is None:
-                img_url = root_element.xpath('amp-img/@src').get()
+                img_url = root_element.css("a amp-img::attr(src)").extract_first()
             if img_url is None:
-                root_element = response.xpath('//tr/td[@class="leaflet-detail-big leaflet-detail-big-without-recipe"]')
-                img_url = root_element.xpath('img/@src').get()
-                if img_url is None:
-                    img_url = root_element.xpath('amp-img/@src').get()
+                img_url = root_element.css("a img::attr(src)").extract_first()
+            if img_url is None:
+                img_url = root_element.css("img::attr(src)").extract_first()
+            if img_url is None:
+                img_url = root_element.css("amp-img::attr(src)").extract_first()
+               
             img_path = response.urljoin(img_url)
-
             img_urls.append(img_path)
             
             last_page_response = response
@@ -89,7 +88,7 @@ class SpecialCatalogueSpider(scrapy.Spider):
         else:
             last_page_url = last_page_response.request.url
             if self.check_catalogue_exists(catalogue_page["name"], last_page_url) == False:
-                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().strip().replace("\n","").split(" - ")[:-1])
+                last_page_name = "-".join(last_page_response.xpath("//div[@class='header']/h1/text()").get().strip().replace("\n","").replace("/","").split(" - ")[:-1])
                 self.write_to_file(catalogue_page, last_page_name, img_urls, last_page_url)
                 #self.write_catalogue_history(catalogue_page["name"], last_page_url)
 

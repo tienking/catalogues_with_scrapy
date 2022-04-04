@@ -5,7 +5,7 @@ DOWNLOAD_INPUT_PATH = "./download_input"
 DOWNLOAD_ERROR_PATH = "./download_error"
 
 # Final path to copy PDF after download done
-FINAL_OUTPUT_PATH = ""
+FINAL_OUTPUT_PATH = "../"
 
 PATH = {
 	"download_path": DOWNLOAD_PATH,
@@ -15,3 +15,6 @@ PATH = {
     "download_error_path": DOWNLOAD_ERROR_PATH,
     "final_output_path": FINAL_OUTPUT_PATH,
 }
+
+# Change this to redirect the output folder
+#PATH["download_path"] = "Z:/RA/_Other/Ongoing Catalogue/Auto/Auto_output_catalogue"
