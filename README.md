@@ -1,2 +1,3 @@
 # catalogues_with_scrapy
-Download catalogues with Scrapy and Python.
+<p>This project using Scrapy to download all the catalogues from <b>au-catalogues.com</b> and <b>my-catalogue.co</b>.</p>
+<p>All the catalogues will be downloaded as JPG and merge into PDF file.</p>
