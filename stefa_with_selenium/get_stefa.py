@@ -6,6 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 import datetime
 import os.path
@@ -31,9 +33,12 @@ def set_selenium_driver_firefox():
     return driver
     
 def run():
-    driver = set_selenium_driver_firefox()
+    #driver = set_selenium_driver_firefox()
+    #driver = set_selenium_driver_chrome()
+    serv=Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=serv)
     headers = driver.find_elements(By.XPATH, '//ul[@class="nav navbar-nav skywalker_menu_catalogo"]/li')
-    items = []
+
     items_pages = []
     print(headers)
     for header in headers:
@@ -51,6 +56,7 @@ def run():
             items_pages.append(header_link)
 
     view_more_wait_time = WebDriverWait(driver, 5)
+    stefa_items = {}
     for items_page in items_pages:
         driver.get(items_page)
         
@@ -76,7 +82,7 @@ def run():
             item_name = item.find_element(By.XPATH, 'div/div/div/a[@id="LnkProdotto"]/span/@src').text
             item_price = item.find_element(By.XPATH, 'div/div/div[@class="text-center"]/span/@src').text
             
-            items[item_id] = {
+            stefa_items[item_id] = {
                 "item_link":item_link,
                 "item_img":item_img,
                 "item_name":item_name,
@@ -85,7 +91,7 @@ def run():
             
     with open("stefa_export.csv", "w", encoding="utf-8", newline="") as outfile:
         csv_writer = csv.writer(outfile)
-        for k, v in items.items():
+        for k, v in stefa_items.items():
             csv.writer.writerow([k, v["item_link"], v["item_img"], v["item_name"], v["item_price"]])
             
     driver.close()
