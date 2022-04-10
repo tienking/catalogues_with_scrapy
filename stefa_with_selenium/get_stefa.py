@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import datetime
@@ -37,22 +38,32 @@ def run():
     #driver = set_selenium_driver_chrome()
     serv=Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=serv)
+    driver.get(STEFA_URL)
+    
     headers = driver.find_elements(By.XPATH, '//ul[@class="nav navbar-nav skywalker_menu_catalogo"]/li')
 
     items_pages = []
-    print(headers)
     for header in headers:
-        header_list = header.find_elements(By.XPATH, 'ul[@class="dropdown-menu"]/li/ul[@class="blocco-sx"]')
+        print(header.find_element(By.XPATH, 'a').get_attribute('innerHTML'))
+        #print(header.get_attribute('innerHTML'))
+        header_list = header.find_elements(By.XPATH, 'ul[@class="dropdown-menu"]/li/ul[@class="blocco-sx"]/li')
             
-        print(header_list)
         if len(header_list) > 0:
             for header_child in header_list:
-                print(header_list)
-                header_link = header_child.find_element(By.XPATH, "a/@href").extract()
-                items_pages.append(header_link)
+                try:
+                    print("NAME: ",header_child.find_element(By.XPATH, 'a/span').get_attribute('textContent'))
+                    if header_child.find_element(By.XPATH, 'a/span').get_attribute('textContent') == "View All":
+                        header_link = header_child.find_element(By.XPATH, 'a').get_attribute("href")
+                        items_pages.append(header_link)
+                        break
+                except:
+                    continue
+            else:
+                for header_child in header_list:
+                    header_link = header_child.find_element(By.XPATH, 'a').get_attribute("href")
+                    items_pages.append(header_link)
         else:
-            print(header.get_attribute('innerHTML'))
-            header_link = header.find_element(By.XPATH, "a/@href").extract()
+            header_link = header.find_element(By.XPATH, 'a').get_attribute("href")
             items_pages.append(header_link)
 
     view_more_wait_time = WebDriverWait(driver, 5)
@@ -65,8 +76,9 @@ def run():
         except NoSuchElementException:
             view_more_btn = None
         while view_more_btn != None:
-            view_more_btn.click()
-            time.sleep(3)
+            #view_more_btn.click()
+            driver.implicitly_wait(10)
+            ActionChains(driver).move_to_element(view_more_btn).click(view_more_btn).perform()
             try:
                 view_more_btn = view_more_wait_time. until(EC.presence_of_element_located((By.XPATH, '//button[@class="btn btn-primary btn-carrello-custom"]')))
             except:
@@ -77,10 +89,10 @@ def run():
         
         for item in items_list:
             item_id = item.find_element(By.XPATH, 'div/@id').extract()
-            item_link = item.find_element(By.XPATH, 'div/div/a[@id="LnkImmagine"]/@href').extract()
-            item_img = item.find_element(By.XPATH, 'div/div/a[@id="LnkImmagine"]/img/@src').extract()
-            item_name = item.find_element(By.XPATH, 'div/div/div/a[@id="LnkProdotto"]/span/@src').text
-            item_price = item.find_element(By.XPATH, 'div/div/div[@class="text-center"]/span/@src').text
+            item_link = item.find_element(By.XPATH, 'div/div/a[@id="LnkImmagine"]').get_attribute("href")
+            item_img = item.find_element(By.XPATH, 'div/div/a[@id="LnkImmagine"]/img').get_attribute("src")
+            item_name = item.find_element(By.XPATH, 'div/div/div/a[@id="LnkProdotto"]/span').get_attribute("src")
+            item_price = item.find_element(By.XPATH, 'div/div/div[@class="text-center"]/span').get_attribute('textContent')
             
             stefa_items[item_id] = {
                 "item_link":item_link,
