@@ -1,0 +1,58 @@
+{
+    "Chemist King":{
+        "url": "https://www.chemistking.com.au/catalogue",
+        "module":"chemistking"
+    },
+    "Amcal":{
+        "url": "https://www.amcal.com.au/online-catalogue",
+        "module":"amcal"
+    },
+    "BCF":{
+        "url": "https://salefinder.com.au/BCF-catalogue",
+        "module":"salefinder"
+    },
+    "Big W":{
+        "url": "https://salefinder.com.au/Big-W-catalogue",
+        "module":"salefinder"
+    },
+    "Bunnings":{
+        "url": "https://salefinder.com.au/Bunnings-Warehouse-catalogue",
+        "module":"salefinder"
+    },
+    "IGA":{
+        "url": "https://salefinder.com.au/IGA-catalogue",
+        "module":"salefinder"
+    },
+    "IGA Liquor":{
+        "url": "https://salefinder.com.au/IGA-Liquor-catalogue",
+        "module":"salefinder"
+    },
+    "Kmart":{
+        "url": "https://salefinder.com.au/Kmart-catalogue",
+        "module":"salefinder"
+    },
+    "Myer":{
+        "url": "https://salefinder.com.au/Myer-catalogue",
+        "module":"salefinder"
+    },
+    "Officeworks":{
+        "url": "https://salefinder.com.au/Officeworks-catalogue",
+        "module":"salefinder"
+    },
+    "Priceline":{
+        "url": "https://salefinder.com.au/Priceline-catalogue",
+        "module":"salefinder"
+    },
+    "Spotlight":{
+        "url": "https://salefinder.com.au/Spotlight-Australia-catalogue",
+        "module":"salefinder"
+    },
+    "Supercheap Auto":{
+        "url": "https://salefinder.com.au/Supercheap-Auto-catalogue",
+        "module":"salefinder"
+    },
+    "Woolworths":{
+        "url": "https://salefinder.com.au/Woolworths-catalogue",
+        "module":"salefinder"
+    }
+}

@@ -5786,3 +5786,1621 @@ JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT
 1659693419847	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
 1659693419933	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
 1659693420082	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1659921736512	Marionette	INFO	Stopped listening on port 49498
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1659925332630	geckodriver	INFO	Listening on 127.0.0.1:53454
+1659925335631	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53455" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileP9sd0P"
+1659925336859	Marionette	INFO	Marionette enabled
+1659925336866	Marionette	INFO	Listening on port 53463
+WebDriver BiDi listening on ws://localhost:53455
+1659925337049	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileP9sd0P\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53455/devtools/browser/12980eee-7e27-4f1d-a3eb-2d558de7e88a
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 1004))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal4294967298/pagestyle22 (resource://devtools/server/actors/page-style.js:1004:5)", "resource://devtools/shared/protocol/Front.js", 376))
+console.error: "Unable to find target with innerWindowId:4294967298"
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Connection closed, pending request to server0.conn0.windowGlobal4294967324/domwalker21, type watchRootNode failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:293:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19\nmodule.exports@resource://devtools/shared/commands/resource/legacy-listeners/root-node.js:60:31\n", "resource://devtools/shared/protocol/Front.js", 107))
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3382: TypeError: data.frameData.id is null
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3382: TypeError: data.frameData.id is null
+console.error: "Unable to find target with innerWindowId:4294967311"
+console.error: "Unable to find target with innerWindowId:4294967311"
+console.error: "Unable to find target with innerWindowId:4294967311"
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Connection closed, pending request to server0.conn0.windowGlobal4294967338/domwalker21, type watchRootNode failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:293:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19\nmodule.exports@resource://devtools/shared/commands/resource/legacy-listeners/root-node.js:60:31\n", "resource://devtools/shared/protocol/Front.js", 107))
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3382: TypeError: data.frameData.id is null
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3382: TypeError: data.frameData.id is null
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3382: TypeError: data.frameData.id is null
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: "Error while calling actor 'domwalker's method 'getEmbedderElement'" "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode]"
+console.error: ({})
+console.error: "Error while calling actor 'domwalker's method 'getEmbedderElement'" "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode]"
+console.error: ({})
+console.error: "Error while calling actor 'domwalker's method 'getEmbedderElement'" "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode]"
+console.error: ({})
+console.warn: "Error while destroying front:" "inspector" (new Error("Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal4294967343/domwalker33 (resource://devtools/server/actors/inspector/document-walker.js:79:0)", "resource://devtools/shared/protocol/Front.js", 376))
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal4294967343/domwalker33 (resource://devtools/server/actors/inspector/document-walker.js:79:0)", "resource://devtools/shared/protocol/Front.js", 376))
+console.warn: "Error while destroying front:" "inspector" (new Error("Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal4294967343/domwalker33 (resource://devtools/server/actors/inspector/document-walker.js:79:0)", "resource://devtools/shared/protocol/Front.js", 376))
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal4294967343/domwalker33 (resource://devtools/server/actors/inspector/document-walker.js:79:0)", "resource://devtools/shared/protocol/Front.js", 376))
+console.warn: "Error while destroying front:" "inspector" (new Error("Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal4294967343/domwalker33 (resource://devtools/server/actors/inspector/document-walker.js:79:0)", "resource://devtools/shared/protocol/Front.js", 376))
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal4294967343/domwalker33 (resource://devtools/server/actors/inspector/document-walker.js:79:0)", "resource://devtools/shared/protocol/Front.js", 376))
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Connection closed, pending request to server0.conn0.windowGlobal4294967351/domwalker21, type watchRootNode failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:293:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19\nmodule.exports@resource://devtools/shared/commands/resource/legacy-listeners/root-node.js:60:31\n", "resource://devtools/shared/protocol/Front.js", 107))
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 376: Error: Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal4294967343/domwalker33 (resource://devtools/server/actors/inspector/document-walker.js:79:0)
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 376: Error: Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal4294967343/domwalker33 (resource://devtools/server/actors/inspector/document-walker.js:79:0)
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 376: Error: Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal4294967343/domwalker33 (resource://devtools/server/actors/inspector/document-walker.js:79:0)
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 4408 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 4320 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.ocr2edit.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.ocr2edit.com"
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 7308 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 2798 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 5497 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 967 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.ocr2edit.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.ocr2edit.com"
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 1327 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 2044 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 1146 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 1194 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 6342 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 909 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/7_ytIEpYWpd7XN7KxgxvHAG9q-1MjoUA1EpcWWHxRKk.js line 2 > eval line 6837 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1659930256756	Marionette	INFO	Stopped listening on port 53463
+1659930306978	geckodriver	INFO	Listening on 127.0.0.1:52780
+1659930310027	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52781" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekwYy6B"
+1659930311050	Marionette	INFO	Marionette enabled
+1659930311056	Marionette	INFO	Listening on port 52791
+WebDriver BiDi listening on ws://localhost:52781
+1659930311434	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekwYy6B\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52781/devtools/browser/728828ed-9f65-489a-af84-19b33a660fc8
+1659930563791	Marionette	INFO	Stopped listening on port 52791
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1659930598636	geckodriver	INFO	Listening on 127.0.0.1:53197
+1659930601682	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53198" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileHDQLfb"
+1659930602288	Marionette	INFO	Marionette enabled
+1659930602293	Marionette	INFO	Listening on port 53206
+WebDriver BiDi listening on ws://localhost:53198
+1659930602863	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileHDQLfb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53198/devtools/browser/5c14cc4d-329b-417c-b959-ddeec1273f7e
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659930907596	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659930958352	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659930982536	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659931028535	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659931115998	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659933016646	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659933052772	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1659933076410	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659933286932	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659933382841	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1659933416022	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://static.parastorage.com/services/third-party/jquery/2.0.3/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1659939328609	Marionette	INFO	Stopped listening on port 53206
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 16356, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 16356, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1660010221382	geckodriver	INFO	Listening on 127.0.0.1:62224
+1660010224699	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "62225" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiley0MkKN"
+1660010226105	Marionette	INFO	Marionette enabled
+1660010226113	Marionette	INFO	Listening on port 62231
+WebDriver BiDi listening on ws://localhost:62225
+1660010228174	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiley0MkKN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62225/devtools/browser/99aded2f-5563-4eaa-bd1f-acbcd2c889e6
+1660012952127	geckodriver	INFO	Listening on 127.0.0.1:53315
+1660012955237	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53316" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiled7gwdK"
+1660012956458	Marionette	INFO	Marionette enabled
+1660012956473	Marionette	INFO	Listening on port 53324
+WebDriver BiDi listening on ws://localhost:53316
+1660012956644	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiled7gwdK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53316/devtools/browser/90625259-993f-457c-928c-ea5df02303f3
+1660120204822	geckodriver	INFO	Listening on 127.0.0.1:51524
+1660120208485	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "51525" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileVskB4N"
+1660120210415	Marionette	INFO	Marionette enabled
+1660120210430	Marionette	INFO	Listening on port 51532
+WebDriver BiDi listening on ws://localhost:51525
+1660120212584	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileVskB4N\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51525/devtools/browser/27070ddf-b0ce-4fc0-a452-30c6c2cb6e15
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+console.warn: ({})
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+JavaScript error: https://d3lwnmxakcj11o.cloudfront.net/ver/34120210826/lasoo/v3/js/libs/waypoints.min.js, line 7: Error: No handler option passed to Waypoint constructor
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.lasoo.com.au"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.lasoo.com.au"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.lasoo.com.au"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.lasoo.com.au"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.lasoo.com.au"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.lasoo.com.au"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.lasoo.com.au"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.lasoo.com.au"
+console.warn: ({})
+JavaScript error: https://www.lasoo.com.au/catalogue/my-chemist-spring-into-savings/5voud8fsp.html?c=my-chemist-spring-into-savings line 348 > injectedScript, line 2: TypeError: document.querySelectorAll(...)[0] is undefined
+console.error: "Unable to find target with innerWindowId:4294967301"
+JavaScript error: https://www.lasoo.com.au/catalogue/my-chemist-spring-into-savings/5voud8fsp.html?c=my-chemist-spring-into-savings line 348 > injectedScript, line 2: TypeError: document.querySelectorAll(...)[0] is undefined
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+JavaScript error: https://www.lasoo.com.au/catalogue/my-chemist-spring-into-savings/5voud8fsp.html?c=my-chemist-spring-into-savings line 348 > injectedScript, line 2: TypeError: document.querySelectorAll(...)[0] is undefined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://app.redpepperdigital.net"
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: https://www.lasoo.com.au/catalogue/my-chemist-spring-into-savings/5voud8fsp.html?c=my-chemist-spring-into-savings line 348 > injectedScript, line 2: TypeError: document.querySelectorAll(...)[0] is undefined
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660126601923	Marionette	INFO	Stopped listening on port 51532
+1660126608140	geckodriver	INFO	Listening on 127.0.0.1:62106
+1660126611962	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "62107" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileW6uSJJ"
+1660126614306	Marionette	INFO	Marionette enabled
+1660126614314	Marionette	INFO	Listening on port 62116
+WebDriver BiDi listening on ws://localhost:62107
+1660126615817	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileW6uSJJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62107/devtools/browser/3d205a1a-095b-4c39-aa68-90371c198af9
+JavaScript error: https://www.countdown.co.nz/shop/content/weeklymailer line 386 > injectedScript, line 1: TypeError: google_tag_manager['GTM-WS64RR'].macro(...) is undefined
+JavaScript warning: https://www.countdown.co.nz/llyV3-ehsnRVU/0d2YmIbES/dIOw4/3SiiLG4f/b0Rn/OBQ0/BlcZOQk, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660126861381	Marionette	INFO	Stopped listening on port 62111660126861612	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "65029" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileCWL6Pc"
+1660126862497	Marionette	INFO	Marionette enabled
+1660126862501	Marionette	INFO	Listening on port 65036
+WebDriver BiDi listening on ws://localhost:65029
+1660126862866	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileCWL6Pc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65029/devtools/browser/f318f80c-2b62-4c7d-a64d-b1ce7d9711f0
+JavaScript error: https://www.countdown.co.nz/shop/content/weeklymailer line 386 > injectedScript, line 1: TypeError: google_tag_manager['GTM-WS64RR'].macro(...) is undefined
+JavaScript warning: https://www.countdown.co.nz/llyV3-ehsnRVU/0d2YmIbES/dIOw4/3SiiLG4f/b0Rn/OBQ0/BlcZOQk, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660126918416	Marionette	INFO	Stopped listening on port 65036
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660127022040	geckodriver	INFO	Listening on 127.0.0.1:65290
+1660127025078	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "65291" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile9lBhzs"
+1660127025579	Marionette	INFO	Marionette enabled
+1660127025584	Marionette	INFO	Listening on port 65296
+WebDriver BiDi listening on ws://localhost:65291
+1660127025732	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile9lBhzs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65291/devtools/browser/5f6eeed0-e5fb-4fbb-9f1e-5afd42bca064
+JavaScript error: https://www.countdown.co.nz/shop/content/weeklymailer#view=catalogue2&saleId=12486&page=1 line 386 > injectedScript, line 1: TypeError: google_tag_manager['GTM-WS64RR'].macro(...) is undefined
+JavaScript warning: https://www.countdown.co.nz/llyV3-ehsnRVU/0d2YmIbES/dIOw4/3SiiLG4f/b0Rn/OBQ0/BlcZOQk, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660127064718	Marionette	INFO	Stopped listening on port 65296
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660127459345	geckodriver	INFO	Listening on 127.0.0.1:49394
+1660127462394	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "49395" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiley6CzZ6"
+1660127463363	Marionette	INFO	Marionette enabled
+1660127463370	Marionette	INFO	Listening on port 49402
+WebDriver BiDi listening on ws://localhost:49395
+1660127464135	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiley6CzZ6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49395/devtools/browser/b62fa2f5-b25f-4311-a62b-a1cfd63763b7
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660129391452	Marionette	INFO	Stopped listening on port 49402
+1660129403661	geckodriver	INFO	Listening on 127.0.0.1:57292
+1660129406720	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "57298" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilehhcr9D"
+1660129408030	Marionette	INFO	Marionette enabled
+1660129408034	Marionette	INFO	Listening on port 57305
+WebDriver BiDi listening on ws://localhost:57298
+1660129408340	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilehhcr9D\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57298/devtools/browser/2e6a14b0-4e5c-450b-bb52-2e39ddd50b7b
+1660129621210	Marionette	INFO	Stopped listening on port 57301660129621858	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "57150" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileEdgJ0b"
+1660129622627	Marionette	INFO	Marionette enabled
+1660129622632	Marionette	INFO	Listening on port 57158
+WebDriver BiDi listening on ws://localhost:57150
+1660129623297	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileEdgJ0b\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57150/devtools/browser/636fc126-6665-40ed-af58-f3b63667ea9e
+1660181588286	Marionette	INFO	Stopped listening on port 57158
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660187666407	geckodriver	INFO	Listening on 127.0.0.1:63474
+1660187669418	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "63475" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilevLcxQA"
+1660187671071	Marionette	INFO	Marionette enabled
+1660187671080	Marionette	INFO	Listening on port 63480
+WebDriver BiDi listening on ws://localhost:63475
+1660187671521	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilevLcxQA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63475/devtools/browser/e1061cbd-d2da-4132-9ea3-ec7efd82c83c
+1660187686116	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660187686218	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660187790096	Marionette	INFO	Stopped listening on port 63480
+1660187884181	geckodriver	INFO	Listening on 127.0.0.1:63752
+1660187887247	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "63753" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileSjTWrM"
+1660187887883	Marionette	INFO	Marionette enabled
+1660187887888	Marionette	INFO	Listening on port 63761
+WebDriver BiDi listening on ws://localhost:63753
+1660187888781	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileSjTWrM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63753/devtools/browser/32aabca8-6a02-4a89-ad2c-d5161255aee1
+1660187896602	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660187896899	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660187966781	Marionette	INFO	Stopped listening on port 63761
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1660187966888	RemoteAgent	ERROR	unable to stop listener: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.js :: allowAllCerts.disable :: line 57"  data: no] Stack trace: allowAllCerts.disable()@cert.js:57
+destroy()@Session.jsm:207
+deleteSession()@WebDriverBiDi.jsm:148
+stop()@WebDriverBiDi.jsm:227
+observe()@resource://gre/modules/AsyncShutdown.jsm:577
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660187978952	geckodriver	INFO	Listening on 127.0.0.1:64051
+1660187981995	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "64052" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileHLNpo0"
+1660187982752	Marionette	INFO	Marionette enabled
+1660187982757	Marionette	INFO	Listening on port 64063
+WebDriver BiDi listening on ws://localhost:64052
+1660187983551	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileHLNpo0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64052/devtools/browser/1b601a9d-395b-4c31-a88b-388dbd2eb6b3
+1660187990721	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660187990847	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660188556772	Marionette	INFO	Stopped listening on port 64063
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660188562780	geckodriver	INFO	Listening on 127.0.0.1:61781
+1660188565811	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "61782" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileWfeAHq"
+1660188566587	Marionette	INFO	Marionette enabled
+1660188566593	Marionette	INFO	Listening on port 61791
+WebDriver BiDi listening on ws://localhost:61782
+1660188567392	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileWfeAHq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61782/devtools/browser/21b0b46a-3db9-4dc6-9bda-6a077a68abeb
+1660188573122	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660188573276	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660189429511	Marionette	INFO	Stopped listening on port 61791
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "62813" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileKBjEVl"
+1660189429846	Marionette	INFO	Marionette enabled
+1660189429851	Marionette	INFO	Listening on port 62819
+WebDriver BiDi listening on ws://localhost:62813
+1660189430238	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileKBjEVl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62813/devtools/browser/147cb2f9-e625-4159-ad90-4edbb5e6f898
+1660189438422	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660189438987	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660189558768	Marionette	INFO	Stopped listening on port 62819
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660209573646	geckodriver	INFO	Listening on 127.0.0.1:51938
+1660209576549	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "51939" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileEEDFYe"
+1660209579561	Marionette	INFO	Marionette enabled
+1660209579567	Marionette	INFO	Listening on port 51950
+WebDriver BiDi listening on ws://localhost:51939
+1660209579724	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileEEDFYe\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51939/devtools/browser/a278b3e3-1e65-4505-971c-6bf86ce429ea
+1660209591773	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209591868	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209591947	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209592033	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209592488	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209592601	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209592675	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209592746	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209592821	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209592932	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209593004	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209593065	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209593127	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209635380	Marionette	INFO	Stopped listening on port 51950
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660209635459	RemoteAgent	ERROR	unable to stop listener: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.js :: allowAllCerts.disable :: line 57"  data: no] Stack trace: allowAllCerts.disable()@cert.js:57
+destroy()@Session.jsm:207
+deleteSession()@WebDriverBiDi.jsm:148
+stop()@WebDriverBiDi.jsm:227
+observe()@resource://gre/modules/AsyncShutdown.jsm:577
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 906: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+1660209863848	geckodriver	INFO	Listening on 127.0.0.1:52299
+1660209866848	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52300" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile1rl1aH"
+1660209867655	Marionette	INFO	Marionette enabled
+1660209867661	Marionette	INFO	Listening on port 52309
+WebDriver BiDi listening on ws://localhost:52300
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 769))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 421))
+1660209873879	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile1rl1aH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52300/devtools/browser/a631fdc1-1ec5-474e-a246-cbc265fd7968
+1660209895107	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209895287	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209895853	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209895939	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209896058	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209896235	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209896520	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209896777	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209896972	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209897157	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209897260	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209897350	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660209897662	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210075433	Marionette	INFO	Stopped listening on port 52309
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52598" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileHo1iSU"
+1660210069343	Marionette	INFO	Marionette enabled
+1660210069348	Marionette	INFO	Listening on port 52605
+WebDriver BiDi listening on ws://localhost:52598
+1660210069490	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileHo1iSU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52598/devtools/browser/5c9b5b7a-9f62-415a-8a01-ecb2a60d55af
+1660210077074	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210077254	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210077393	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210077597	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210077815	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210078064	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210078297	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210078438	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210078569	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210078747	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210078870	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210078980	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210079092	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660212584149	Marionette	INFO	Stopped listening on port 52605
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52755" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile3nRMPA"
+1660210130857	Marionette	INFO	Marionette enabled
+1660210130876	Marionette	INFO	Listening on port 52762
+WebDriver BiDi listening on ws://localhost:52755
+1660210131521	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile3nRMPA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52755/devtools/browser/9721a0aa-a3db-45b6-b20a-a23293c440f7
+1660210136810	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210136891	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210136982	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210137077	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210137149	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210137221	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210137308	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210137395	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210137488	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210137623	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210137781	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210137966	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210138121	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660212584189	Marionette	INFO	Stopped listening on port 52762
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52979" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile3qds1u"
+1660210254974	Marionette	INFO	Marionette enabled
+1660210254981	Marionette	INFO	Listening on port 52989
+WebDriver BiDi listening on ws://localhost:52979
+1660210256031	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile3qds1u\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52979/devtools/browser/f070f87b-2171-4ea4-9d19-78fe46e6f07e
+1660210265252	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210265722	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210266143	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210266438	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210266620	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210266822	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210266945	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210267099	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210267218	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210267365	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210267722	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210268144	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660210268566	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660212584449	Marionette	INFO	Stopped listening on port 52989
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 22920, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:554
+1660212750539	geckodriver	INFO	Listening on 127.0.0.1:56069
+1660212753535	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "56070" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileoIYrsV"
+1660212754717	Marionette	INFO	Marionette enabled
+1660212754722	Marionette	INFO	Listening on port 56080
+WebDriver BiDi listening on ws://localhost:56070
+1660212754905	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileoIYrsV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56070/devtools/browser/fbbcd957-064e-46c5-9bfc-cb3f2afe42cf
+1660213133273	Marionette	INFO	Stopped listening on port 56080
+0213129919	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "56634" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileXHcA5n"
+1660213130733	Marionette	INFO	Marionette enabled
+1660213130739	Marionette	INFO	Listening on port 56641
+WebDriver BiDi listening on ws://localhost:56634
+1660213131199	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileXHcA5n\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56634/devtools/browser/0383610f-fcf8-4128-8103-68b8849cf2ce
+1660213427178	Marionette	INFO	Stopped listening on port 56641
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660273724522	geckodriver	INFO	Listening on 127.0.0.1:59100
+1660273727569	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "59101" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileA8JfOw"
+1660273730555	Marionette	INFO	Marionette enabled
+1660273730641	Marionette	INFO	Listening on port 59110
+WebDriver BiDi listening on ws://localhost:59101
+1660273731092	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileA8JfOw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59101/devtools/browser/c7c17ef2-e4cd-421c-a4f1-f8e9ab0b5563
+1660273741153	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273741424	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273741543	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273741707	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273741850	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273742049	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273742354	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273742688	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273742998	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273743742	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273743930	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273744116	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660273744163	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274330901	Marionette	INFO	Stopped listening on port 59110
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660274333793	geckodriver	INFO	Listening on 127.0.0.1:59943
+1660274336816	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "59944" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilePXsvDR"
+1660274337892	Marionette	INFO	Marionette enabled
+1660274337897	Marionette	INFO	Listening on port 59954
+WebDriver BiDi listening on ws://localhost:59944
+1660274338274	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilePXsvDR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59944/devtools/browser/4fe43bb3-98cb-46e0-8ee6-0d3aab9721fc
+1660274347071	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274347415	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274347593	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274347760	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274347934	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274348246	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274348770	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274348846	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274348915	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274348983	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274349064	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274349198	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660274349344	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660275779593	Marionette	INFO	Stopped listening on port 59954
+0275774760	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "65248" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekUF1Jd"
+1660275776357	Marionette	INFO	Marionette enabled
+1660275776362	Marionette	INFO	Listening on port 65255
+WebDriver BiDi listening on ws://localhost:65248
+1660275777223	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekUF1Jd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65248/devtools/browser/0982e5a0-13d7-40fc-9511-7603d9921c3e
+IPDL protocol Error: Received an invalid file descriptor
+JavaScript error: , line 0: NS_ERROR_ABORT
+1660275946276	Marionette	INFO	Stopped listening on port 65255
+0275942684	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "65512" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile6h8gLg"
+1660275944121	Marionette	INFO	Marionette enabled
+1660275944128	Marionette	INFO	Listening on port 65522
+WebDriver BiDi listening on ws://localhost:65512
+1660275944707	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile6h8gLg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65512/devtools/browser/d3daf6c2-bd0b-41a8-8686-afed7f74a199
+1660276044902	Marionette	INFO	Stopped listening on port 65522
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660276051602	geckodriver	INFO	Listening on 127.0.0.1:49314
+1660276055027	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "49315" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileBvjYji"
+1660276055858	Marionette	INFO	Marionette enabled
+1660276055867	Marionette	INFO	Listening on port 49323
+WebDriver BiDi listening on ws://localhost:49315
+1660276056941	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileBvjYji\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49315/devtools/browser/9d1f8e98-0c02-4c4a-9a1b-135568ac05ec
+1660276378380	Marionette	INFO	Stopped listening on port 49323
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660276380227	geckodriver	INFO	Listening on 127.0.0.1:49780
+1660276383245	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "49781" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileXyU0jm"
+1660276384151	Marionette	INFO	Marionette enabled
+1660276384158	Marionette	INFO	Listening on port 49790
+WebDriver BiDi listening on ws://localhost:49781
+1660276384586	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileXyU0jm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49781/devtools/browser/df8fdae0-23c0-41a9-9675-55cfcb5e1834
+1660276440070	Marionette	INFO	Stopped listening on port 49790
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660276440303	RemoteAgent	ERROR	unable to stop listener: [Exception... "Component returned failure code: 0xconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilep00U3r\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49918/devtools/browser/6179a67d-6be5-463a-9848-1a064d0bc5b6
+1660276456771	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276456840	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276456955	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276457183	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276457235	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276457307	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276457618	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276457620	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276457621	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276457784	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276457851	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276458002	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276458174	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276821923	Marionette	INFO	Stopped listening on port 49926
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660276833400	geckodriver	INFO	Listening on 127.0.0.1:50593
+1660276836421	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "50594" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiledmwfMS"
+1660276837632	Marionette	INFO	Marionette enabled
+1660276837637	Marionette	INFO	Listening on port 50603
+WebDriver BiDi listening on ws://localhost:50594
+1660276838030	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiledmwfMS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50594/devtools/browser/4d94062d-7cd6-40c1-a0ce-065f6618c7b4
+IPDL protocol Error: Received an invalid file descriptor
+JavaScript error: , line 0: NS_ERROR_ABORT
+1660276868889	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869013	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869157	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869241	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869309	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869380	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869483	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869714	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869780	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869859	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276869949	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276870033	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660276870218	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277362699	Marionette	INFO	Stopped listening on port 50603
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "56356" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileZHm0nj"
+1660277364066	Marionette	INFO	Marionette enabled
+1660277364071	Marionette	INFO	Listening on port 56364
+WebDriver BiDi listening on ws://localhost:56356
+1660277364401	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileZHm0nj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56356/devtools/browser/41885a33-5ac6-4a09-8963-733b2fffb83c
+1660277377723	Marionette	INFO	Stopped listening on port 56364
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660277393159	geckodriver	INFO	Listening on 127.0.0.1:56459
+1660277396241	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "56460" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilePx58RB"
+1660277396899	Marionette	INFO	Marionette enabled
+1660277396903	Marionette	INFO	Listening on port 56466
+WebDriver BiDi listening on ws://localhost:56460
+1660277397669	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilePx58RB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56460/devtools/browser/9f2e68f6-0cc0-4e2a-9252-205434ce59e0
+1660277534767	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277534953	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277535104	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277535241	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277535375	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277535505	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277535659	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277535771	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277535912	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277536218	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277536372	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277536504	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277536633	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660277636823	Marionette	INFO	Stopped listening on port 56466
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660277678294	geckodriver	INFO	Listening on 127.0.0.1:61943
+1660277681372	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "61944" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileug2zF5"
+1660277682257	Marionette	INFO	Marionette enabled
+1660277682262	Marionette	INFO	Listening on port 61951
+WebDriver BiDi listening on ws://localhost:61944
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1660277683196	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileug2zF5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61944/devtools/browser/610b3718-6086-403d-b43b-bbe52cd8f940
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660277714615	Marionette	INFO	Stopped listening on port 61951
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660279183237	geckodriver	INFO	Listening on 127.0.0.1:63653
+1660279186574	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "63654" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileiFDyRl"
+1660279188107	Marionette	INFO	Marionette enabled
+1660279188115	Marionette	INFO	Listening on port 63661
+WebDriver BiDi listening on ws://localhost:63654
+1660279188646	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileiFDyRl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63654/devtools/browser/02d4578c-094d-4a7d-9af9-ef5ca04d4293
+IPDL protocol Error: Received an invalid file descriptor
+JavaScript error: , line 0: NS_ERROR_ABORT
+1660279303365	Marionette	INFO	Stopped listening on port 63661
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "63824" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileaOVKaf"
+1660279291469	Marionette	INFO	Marionette enabled
+1660279291474	Marionette	INFO	Listening on port 63833
+WebDriver BiDi listening on ws://localhost:63824
+1660279291556	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileaOVKaf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63824/devtools/browser/8207cc0d-ae42-43be-8554-7bfac8b47b00
+1660279307796	Marionette	INFO	Stopped listening on port 63833
+1660280244459	geckodriver	INFO	Listening on 127.0.0.1:54621
+1660280247517	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "54622" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileyyahex"
+1660280250343	Marionette	INFO	Marionette enabled
+1660280250353	Marionette	INFO	Listening on port 54631
+WebDriver BiDi listening on ws://localhost:54622
+1660280250936	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileyyahex\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54622/devtools/browser/cb1992e2-7173-49c6-a892-ae81d5c2f18d
+1660280259366	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280259480	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280259547	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280259631	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280259697	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280259760	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280259994	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280260066	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280260140	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280260294	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280260431	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280260607	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660280260729	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660284693193	Marionette	INFO	Stopped listening on port 54631
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "55179" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileIKZR4r"
+1660280681522	Marionette	INFO	Marionette enabled
+1660280681528	Marionette	INFO	Listening on port 55186
+WebDriver BiDi listening on ws://localhost:55179
+1660280682557	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileIKZR4r\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55179/devtools/browser/f1d78a5e-277f-49a6-9f8b-988bca695ca6
+1660280721812	Marionette	INFO	Stopped listening on port 55186
+1660280723155	geckodriver	INFO	Listening on 127.0.0.1:55319
+1660280726442	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "55320" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileqEc9uw"
+1660280727090	Marionette	INFO	Marionette enabled
+1660280727095	Marionette	INFO	Listening on port 55326
+WebDriver BiDi listening on ws://localhost:55320
+1660280728009	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileqEc9uw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55320/devtools/browser/7dbcaaf2-dc30-459e-84c5-88b2e6e355d2
+1660284691538	Marionette	INFO	Stopped listening on port 55326
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "57840" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilePRmHHn"
+1660282923525	Marionette	INFO	Marionette enabled
+1660282923531	Marionette	INFO	Listening on port 57850
+WebDriver BiDi listening on ws://localhost:57840
+1660282923831	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilePRmHHn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57840/devtools/browser/8f6ca18c-3f60-49e9-bc7e-17028d99b347
+1660282971573	Marionette	INFO	Stopped listening on port 57850
+1660282974171	geckodriver	INFO	Listening on 127.0.0.1:57996
+1660282977022	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "57997" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileq6j1L0"
+1660282978401	Marionette	INFO	Marionette enabled
+1660282978407	Marionette	INFO	Listening on port 58006
+WebDriver BiDi listening on ws://localhost:57997
+1660282978915	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileq6j1L0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57997/devtools/browser/7427cd97-b5a8-4f49-9667-5f70735c367f
+1660283051373	Marionette	INFO	Stopped listening on port 58006
+1660283054981	geckodriver	INFO	Listening on 127.0.0.1:58147
+1660283057371	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "58148" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilesM0Zzj"
+1660283058886	Marionette	INFO	Marionette enabled
+1660283058891	Marionette	INFO	Listening on port 58153
+WebDriver BiDi listening on ws://localhost:58148
+1660283059816	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilesM0Zzj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58148/devtools/browser/9c3dc717-73a7-44c8-abb9-7344c168143f
+1660283074145	Marionette	INFO	Stopped listening on port 58153
+1660283075320	geckodriver	INFO	Listening on 127.0.0.1:58203
+1660283078374	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "58204" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileUqvN4q"
+1660283080329	Marionette	INFO	Marionette enabled
+1660283080334	Marionette	INFO	Listening on port 58212
+WebDriver BiDi listening on ws://localhost:58204
+1660283080769	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileUqvN4q\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58204/devtools/browser/d63c1c49-bdeb-45eb-8976-07269e9d9220
+1660283090451	Marionette	INFO	Stopped listening on port 58212
+1660283091780	geckodriver	INFO	Listening on 127.0.0.1:58314
+1660283095023	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "58315" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilevTCop9"
+1660283095548	Marionette	INFO	Marionette enabled
+1660283095553	Marionette	INFO	Listening on port 58325
+WebDriver BiDi listening on ws://localhost:58315
+1660283095724	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilevTCop9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58315/devtools/browser/2ae8b15e-e17c-487e-8efc-bee55ff91e10
+1660283422006	Marionette	INFO	Stopped listening on port 58325
+1660283422846	geckodriver	INFO	Listening on 127.0.0.1:58735
+1660283426159	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "58736" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileJ4bfy9"
+1660283426692	Marionette	INFO	Marionette enabled
+1660283426698	Marionette	INFO	Listening on port 58742
+WebDriver BiDi listening on ws://localhost:58736
+1660283427764	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileJ4bfy9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58736/devtools/browser/085b70ca-9fe3-4b4d-8476-f335e6dcf813
+JavaScript error: https://salefinder.com.au/js/catalogue.js, line 153: TypeError: sfCatalogue.carouselList[1] is undefined
+1660283437271	Marionette	INFO	Stopped listening on port 58742
+1660283438535	geckodriver	INFO	Listening on 127.0.0.1:58822
+1660283441585	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "58823" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileWb42xw"
+1660283442397	Marionette	INFO	Marionette enabled
+1660283442403	Marionette	INFO	Listening on port 58830
+WebDriver BiDi listening on ws://localhost:58823
+1660283442596	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileWb42xw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58823/devtools/browser/646fdd1b-cae3-4db8-be94-f8fc0f13ad19
+1660283479765	Marionette	INFO	Stopped listening on port 58830
+1660283481029	geckodriver	INFO	Listening on 127.0.0.1:58946
+1660283484346	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "58947" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile4uto5R"
+1660283485238	Marionette	INFO	Marionette enabled
+1660283485244	Marionette	INFO	Listening on port 58958
+WebDriver BiDi listening on ws://localhost:58947
+1660283485667	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile4uto5R\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58947/devtools/browser/d397642b-ed32-4a1a-911b-4d595ae0796d
+1660283539709	Marionette	INFO	Stopped listening on port 58958
+1660283541101	geckodriver	INFO	Listening on 127.0.0.1:59115
+1660283544187	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "59116" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile52QXrM"
+1660283544904	Marionette	INFO	Marionette enabled
+1660283544909	Marionette	INFO	Listening on port 59124
+WebDriver BiDi listening on ws://localhost:59116
+1660283545064	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile52QXrM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59116/devtools/browser/71e56ff8-4efc-4416-bbd9-6d7199e8ba74
+1660283561589	Marionette	INFO	Stopped listening on port 59124
+1660283562834	geckodriver	INFO	Listening on 127.0.0.1:59197
+1660283566157	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "59198" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileqdQ1tf"
+1660283566789	Marionette	INFO	Marionette enabled
+1660283566795	Marionette	INFO	Listening on port 59209
+WebDriver BiDi listening on ws://localhost:59198
+1660283566953	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileqdQ1tf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59198/devtools/browser/42956594-2d7f-4b82-a60f-d7ba5dacb837
+1660283635367	Marionette	INFO	Stopped listening on port 59209
+1660283636666	geckodriver	INFO	Listening on 127.0.0.1:59407
+1660283639728	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "59408" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilebpXM2m"
+1660283640442	Marionette	INFO	Marionette enabled
+1660283640451	Marionette	INFO	Listening on port 59416
+WebDriver BiDi listening on ws://localhost:59408
+1660283640595	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilebpXM2m\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59408/devtools/browser/f53e4936-4a0c-4ba1-b86f-238d43096503
+1660283656328	Marionette	INFO	Stopped listening on port 59416
+1660283657872	geckodriver	INFO	Listening on 127.0.0.1:59485
+1660283661303	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "59486" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilea6GQOs"
+1660283661926	Marionette	INFO	Marionette enabled
+1660283661931	Marionette	INFO	Listening on port 59492
+WebDriver BiDi listening on ws://localhost:59486
+1660283662866	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilea6GQOs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59486/devtools/browser/6ae5a965-ad60-4a2c-8257-03e012bd89d8
+1660283672555	Marionette	INFO	Stopped listening on port 59492
+1660283674305	geckodriver	INFO	Listening on 127.0.0.1:59580
+1660283677356	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "59581" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileienxxv"
+1660283678653	Marionette	INFO	Marionette enabled
+1660283678658	Marionette	INFO	Listening on port 59589
+WebDriver BiDi listening on ws://localhost:59581
+1660283679078	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileienxxv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59581/devtools/browser/897b8447-ad9b-4203-aca9-68fd89cf662e
+1660284005674	Marionette	INFO	Stopped listening on port 59589
+1660284007108	geckodriver	INFO	Listening on 127.0.0.1:59982
+1660284010148	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "59983" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile7KVdGv"
+1660284010731	Marionette	INFO	Marionette enabled
+1660284010736	Marionette	INFO	Listening on port 59990
+WebDriver BiDi listening on ws://localhost:59983
+1660284011467	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile7KVdGv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59983/devtools/browser/2fb7eb81-875c-4033-92e8-02e9ea0b11b0
+1660284044039	Marionette	INFO	Stopped listening on port 59990
+1660284045544	geckodriver	INFO	Listening on 127.0.0.1:60108
+1660284048596	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "60109" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiledU3V7s"
+1660284049293	Marionette	INFO	Marionette enabled
+1660284049299	Marionette	INFO	Listening on port 60117
+WebDriver BiDi listening on ws://localhost:60109
+1660284049430	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiledU3V7s\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60109/devtools/browser/14e99652-5f07-4fc8-a013-dccaccd16d9b
+1660284419038	Marionette	INFO	Stopped listening on port 60117
+1660284420095	geckodriver	INFO	Listening on 127.0.0.1:60625
+1660284423534	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "60626" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileJWv687"
+1660284424539	Marionette	INFO	Marionette enabled
+1660284424544	Marionette	INFO	Listening on port 60635
+WebDriver BiDi listening on ws://localhost:60626
+1660284424852	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileJWv687\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60626/devtools/browser/b1681677-821a-45dc-b416-572204eaf1f3
+1660284692580	Marionette	INFO	Stopped listening on port 60635
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660287433374	geckodriver	INFO	Listening on 127.0.0.1:52422
+1660287436399	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52423" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileqYXdnY"
+1660287438170	Marionette	INFO	Marionette enabled
+1660287438179	Marionette	INFO	Listening on port 52430
+WebDriver BiDi listening on ws://localhost:52423
+1660287438747	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileqYXdnY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52423/devtools/browser/ba0e6714-ecfd-484f-865a-fd915bcf043e
+1660287504862	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287505118	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287505481	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287505974	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287506381	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287510343	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287510484	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287510511	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287510631	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287510724	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287510795	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287513397	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287513528	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287547516	Marionette	INFO	Stopped listening on port 52430
+1660287548828	geckodriver	INFO	Listening on 127.0.0.1:52700
+1660287551868	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52701" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilechSUEr"
+1660287552674	Marionette	INFO	Marionette enabled
+1660287552679	Marionette	INFO	Listening on port 52711
+WebDriver BiDi listening on ws://localhost:52701
+1660287553722	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilechSUEr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52701/devtools/browser/ad903d79-2afa-41ac-a3ce-282398c8a861
+1660287560795	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287560896	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287561092	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287561094	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287561371	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287578713	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287582294	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287582357	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287582358	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287582368	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287582372	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287583864	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287585791	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287654007	Marionette	INFO	Stopped listening on port 52711
+1660287655361	geckodriver	INFO	Listening on 127.0.0.1:52986
+1660287658439	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52987" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileYwKbkI"
+1660287659206	Marionette	INFO	Marionette enabled
+1660287659210	Marionette	INFO	Listening on port 52997
+WebDriver BiDi listening on ws://localhost:52987
+1660287659904	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileYwKbkI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52987/devtools/browser/96cc897f-b11a-4c40-877c-0cc57edc1c48
+1660287680852	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287681103	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287681154	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287681295	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287681482	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287683670	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287683771	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287683835	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287683895	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287683978	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287686154	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287686284	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287686525	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287704700	Marionette	INFO	Stopped listening on port 52997
+1660287706483	geckodriver	INFO	Listening on 127.0.0.1:53148
+1660287709556	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53149" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile276Qkq"
+1660287710308	Marionette	INFO	Marionette enabled
+1660287710313	Marionette	INFO	Listening on port 53158
+WebDriver BiDi listening on ws://localhost:53149
+1660287710953	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile276Qkq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53149/devtools/browser/c8d57fdf-64ad-4854-a4fa-0ff491a3ab03
+1660287719427	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287719496	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287719578	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287719657	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287719736	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287724542	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287724858	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287725075	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287725384	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287725658	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287725940	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287726190	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287726394	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287726634	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287726822	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287728147	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660287750651	Marionette	INFO	Stopped listening on port 53158
+[Parent 23488, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1660287752358	geckodriver	INFO	Listening on 127.0.0.1:53293
+1660287755616	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53294" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileviOWHc"
+1660287756555	Marionette	INFO	Marionette enabled
+1660287756564	Marionette	INFO	Listening on port 53303
+WebDriver BiDi listening on ws://localhost:53294
+1660287757020	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileviOWHc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53294/devtools/browser/24cc1e6e-d137-4504-9c59-ad6887eeee19
+1660289611018	Marionette	INFO	Stopped listening on port 53303
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "63559" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiletDNVtC"
+1660289595890	Marionette	INFO	Marionette enabled
+1660289595896	Marionette	INFO	Listening on port 63573
+WebDriver BiDi listening on ws://localhost:63559
+1660289596262	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiletDNVtC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63559/devtools/browser/64abc5ad-0d5b-4ebd-90d1-84def78b0ef8
+1660289604590	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289604728	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289604847	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289604954	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289605084	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289605223	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289605397	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289605624	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289605779	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289605946	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289606121	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289606270	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289606386	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289644631	Marionette	INFO	Stopped listening on port 63573
+1660289646508	geckodriver	INFO	Listening on 127.0.0.1:63735
+1660289649641	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "63736" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileamY2qc"
+1660289650580	Marionette	INFO	Marionette enabled
+1660289650585	Marionette	INFO	Listening on port 63743
+WebDriver BiDi listening on ws://localhost:63736
+1660289651317	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileamY2qc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63736/devtools/browser/42db34aa-c0ae-4e4d-b64f-1e4e37f77409
+1660289657119	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289657336	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289657455	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289658199	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289658287	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289658413	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289658554	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289658717	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289658904	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289659147	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289659223	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289659427	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289659567	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289713470	Marionette	INFO	Stopped listening on port 63743
+!!! error running onStopped callback: TypeError: callback is not a function
+1660289715085	geckodriver	INFO	Listening on 127.0.0.1:63940
+1660289718127	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "63941" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilevdvhzB"
+1660289719503	Marionette	INFO	Marionette enabled
+1660289719508	Marionette	INFO	Listening on port 63952
+WebDriver BiDi listening on ws://localhost:63941
+1660289719645	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilevdvhzB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63941/devtools/browser/71b2d32a-6c8d-47d7-bc99-f26bd65801bc
+1660289737352	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289737774	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289737956	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289737958	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289738198	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289738255	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289738490	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289738587	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289738724	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289738901	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289738994	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289739073	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289739206	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289743334	Marionette	INFO	Stopped listening on port 63952
+1660289744485	geckodriver	INFO	Listening on 127.0.0.1:64069
+1660289747536	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "64070" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileDuHgFx"
+1660289748166	Marionette	INFO	Marionette enabled
+1660289748171	Marionette	INFO	Listening on port 64078
+WebDriver BiDi listening on ws://localhost:64070
+1660289748854	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileDuHgFx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64070/devtools/browser/da6e2aa6-6586-403d-acdb-294e233a8e87
+1660289755002	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755147	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755228	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755308	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755403	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755464	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755546	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755627	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755706	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755771	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755847	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755929	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289755978	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289756050	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289756242	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289756447	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289770895	Marionette	INFO	Stopped listening on port 64078
+1660289772045	geckodriver	INFO	Listening on 127.0.0.1:64181
+1660289775117	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "64182" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileJDAEIO"
+1660289775643	Marionette	INFO	Marionette enabled
+1660289775647	Marionette	INFO	Listening on port 64190
+WebDriver BiDi listening on ws://localhost:64182
+1660289775825	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileJDAEIO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64182/devtools/browser/89d01fda-b84d-4db5-83f1-07585db02c10
+1660289818409	Marionette	INFO	Stopped listening on port 64190
+1660289820576	geckodriver	INFO	Listening on 127.0.0.1:51534
+1660289824312	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "51535" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileCtnQ3P"
+1660289827139	Marionette	INFO	Marionette enabled
+1660289827148	Marionette	INFO	Listening on port 51545
+WebDriver BiDi listening on ws://localhost:51535
+1660289827283	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileCtnQ3P\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51535/devtools/browser/5e0876a2-4db5-48b1-bdd4-bdf86589fc62
+1660289859206	Marionette	INFO	Stopped listening on port 51545
+1660289862019	geckodriver	INFO	Listening on 127.0.0.1:51662
+1660289865448	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "51663" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileLvhcRZ"
+1660289867698	Marionette	INFO	Marionette enabled
+1660289867703	Marionette	INFO	Listening on port 51672
+WebDriver BiDi listening on ws://localhost:51663
+1660289868354	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileLvhcRZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51663/devtools/browser/84b75fcb-8ae6-49fa-b296-743f7283d0ee
+1660289908790	Marionette	INFO	Stopped listening on port 51672
+1660289910181	geckodriver	INFO	Listening on 127.0.0.1:51808
+1660289913244	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "51809" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilegxyK4g"
+1660289914184	Marionette	INFO	Marionette enabled
+1660289914194	Marionette	INFO	Listening on port 51819
+WebDriver BiDi listening on ws://localhost:51809
+1660289914730	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilegxyK4g\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51809/devtools/browser/0fb734e4-e0db-45ed-86da-91a6040437ad
+1660289920026	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289920083	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289920180	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289920318	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289920455	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289920512	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289920748	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289920820	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289920880	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289920949	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289921014	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289921102	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289921232	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289926689	Marionette	INFO	Stopped listening on port 51819
+1660289927723	geckodriver	INFO	Listening on 127.0.0.1:51906
+1660289930774	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "51907" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileH6Ht9X"
+1660289931361	Marionette	INFO	Marionette enabled
+1660289931369	Marionette	INFO	Listening on port 51923
+WebDriver BiDi listening on ws://localhost:51907
+1660289931532	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileH6Ht9X\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51907/devtools/browser/7f13b808-9b9f-4314-82a5-8c6b7a3152ca
+1660289937993	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938188	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938192	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938242	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938326	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938471	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938665	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938687	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938770	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938859	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289938951	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289939012	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289939131	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289975801	Marionette	INFO	Stopped listening on port 51923
+1660289977669	geckodriver	INFO	Listening on 127.0.0.1:52542
+1660289980898	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52543" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile3xo0Ef"
+1660289983574	Marionette	INFO	Marionette enabled
+1660289983580	Marionette	INFO	Listening on port 52550
+WebDriver BiDi listening on ws://localhost:52543
+1660289984251	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile3xo0Ef\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52543/devtools/browser/f72b2b51-4b14-4f8b-afe0-3640f93a901d
+1660289990151	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289990273	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289990578	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289990659	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289990823	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289991042	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289991235	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289991466	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289991566	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289991644	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289991711	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289991878	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660289991960	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290034251	Marionette	INFO	Stopped listening on port 52550
+1660290035593	geckodriver	INFO	Listening on 127.0.0.1:52727
+1660290039295	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52728" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilevyxt3m"
+1660290040241	Marionette	INFO	Marionette enabled
+1660290040246	Marionette	INFO	Listening on port 52741
+WebDriver BiDi listening on ws://localhost:52728
+1660290040996	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilevyxt3m\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52728/devtools/browser/c931e4a2-e8e2-42e5-8101-d972697aaff1
+1660290059567	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290059658	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290059774	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290059962	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290060283	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290060351	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290060423	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290060509	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290060588	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290061267	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290061512	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290061699	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290061952	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290115869	Marionette	INFO	Stopped listening on port 52741
+1660290117716	geckodriver	INFO	Listening on 127.0.0.1:52959
+1660290121197	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "52960" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilewpyhvn"
+1660290123676	Marionette	INFO	Marionette enabled
+1660290123680	Marionette	INFO	Listening on port 52970
+WebDriver BiDi listening on ws://localhost:52960
+1660290123818	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilewpyhvn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52960/devtools/browser/6294ca94-9ad4-4796-97ef-a8e8b630453a
+1660290143263	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290143542	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290143657	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290144027	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290144246	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290144773	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290144804	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290144935	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290145081	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290145201	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290145314	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290145609	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290145745	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290149598	Marionette	INFO	Stopped listening on port 52970
+1660290152650	geckodriver	INFO	Listening on 127.0.0.1:53098
+1660290156283	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53099" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileGLgYbX"
+1660290157788	Marionette	INFO	Marionette enabled
+1660290157794	Marionette	INFO	Listening on port 53107
+WebDriver BiDi listening on ws://localhost:53099
+1660290159722	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileGLgYbX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53099/devtools/browser/ddb7ed1d-28cd-4d5e-8760-053239d9c63c
+1660290165026	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290165531	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290165595	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290165679	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290165741	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290165801	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290165878	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290165944	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290166031	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290166106	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290166190	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290166257	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290166323	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290166392	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290182882	Marionette	INFO	Stopped listening on port 53107
+1660290185307	geckodriver	INFO	Listening on 127.0.0.1:53226
+1660290188377	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53227" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileXQwT3A"
+1660290189466	Marionette	INFO	Marionette enabled
+1660290189471	Marionette	INFO	Listening on port 53236
+WebDriver BiDi listening on ws://localhost:53227
+1660290190595	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileXQwT3A\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53227/devtools/browser/2e771749-2ad2-4ef0-9801-866032a90ba4
+1660290260896	Marionette	INFO	Stopped listening on port 53236
+1660290262290	geckodriver	INFO	Listening on 127.0.0.1:53421
+1660290265288	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53422" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilelV9D3S"
+1660290266135	Marionette	INFO	Marionette enabled
+1660290266140	Marionette	INFO	Listening on port 53431
+WebDriver BiDi listening on ws://localhost:53422
+1660290266850	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilelV9D3S\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53422/devtools/browser/475a9446-373e-48ac-83ae-0ff7190291d1
+1660290272625	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290272761	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274111	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274182	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274267	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274340	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274415	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274494	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274579	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274644	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274794	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274875	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290274974	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290313413	Marionette	INFO	Stopped listening on port 53431
+1660290314713	geckodriver	INFO	Listening on 127.0.0.1:53603
+1660290317762	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53604" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileVK6Q2f"
+1660290318576	Marionette	INFO	Marionette enabled
+1660290318580	Marionette	INFO	Listening on port 53613
+WebDriver BiDi listening on ws://localhost:53604
+1660290319158	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileVK6Q2f\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53604/devtools/browser/26057f88-cb92-4855-bf01-fc26375d7045
+1660290327364	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290327578	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290327842	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328204	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328207	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328209	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328219	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328416	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328501	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328561	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328801	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328805	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328806	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328916	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290328997	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660290409542	Marionette	INFO	Stopped listening on port 53613
+1660290412851	geckodriver	INFO	Listening on 127.0.0.1:53844
+1660290415906	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "53845" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileyyqLw1"
+1660290417218	Marionette	INFO	Marionette enabled
+1660290417224	Marionette	INFO	Listening on port 53859
+WebDriver BiDi listening on ws://localhost:53845
+1660290417583	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileyyqLw1\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53845/devtools/browser/84460955-4d6c-4326-a5fb-8cf0279fb6e4
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660291002799	Marionette	INFO	Stopped listening on port 53859
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660291310158	geckodriver	INFO	Listening on 127.0.0.1:54753
+1660291313204	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "54754" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileSbXFmo"
+1660291314501	Marionette	INFO	Marionette enabled
+1660291314506	Marionette	INFO	Listening on port 54761
+WebDriver BiDi listening on ws://localhost:54754
+1660291314856	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileSbXFmo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54754/devtools/browser/6a93c74d-8b46-4d89-b41d-ea14bca6c460
+1660291340487	Marionette	INFO	Stopped listening on port 54761
+1660291493193	geckodriver	INFO	Listening on 127.0.0.1:54596
+1660291496378	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "54597" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekx47sQ"
+1660291498688	Marionette	INFO	Marionette enabled
+1660291498693	Marionette	INFO	Listening on port 49490
+WebDriver BiDi listening on ws://localhost:54597
+1660291499105	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekx47sQ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54597/devtools/browser/2de8deae-61c2-4131-ba5f-3d7ae7c0121d
+1660291523026	Marionette	INFO	Stopped listening on port 49490
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660291574175	geckodriver	INFO	Listening on 127.0.0.1:61269
+1660291577218	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "61270" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileHnbBZt"
+1660291578042	Marionette	INFO	Marionette enabled
+1660291578053	Marionette	INFO	Listening on port 61278
+WebDriver BiDi listening on ws://localhost:61270
+1660291578683	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileHnbBZt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61270/devtools/browser/b59c094c-6f9a-4265-a1e3-8b293b602750
+1660291588238	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291588407	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291588536	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291588645	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291588704	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291588835	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291588851	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291588925	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291589001	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291589068	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291589132	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291589249	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291589291	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291589352	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291589421	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660291642405	Marionette	INFO	Stopped listening on port 61278
+1660291644237	geckodriver	INFO	Listening on 127.0.0.1:61419
+1660291647282	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "61420" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile9ktdih"
+1660291650231	Marionette	INFO	Marionette enabled
+1660291650237	Marionette	INFO	Listening on port 61435
+WebDriver BiDi listening on ws://localhost:61420
+1660291650594	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofile9ktdih\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61420/devtools/browser/52bc9b27-3c85-477d-b925-bb9ec2d4bb73
+1660291725359	Marionette	INFO	Stopped listening on port 61435
+1660291726656	geckodriver	INFO	Listening on 127.0.0.1:61560
+1660291729727	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "61561" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileOZYmrG"
+1660291730390	Marionette	INFO	Marionette enabled
+1660291730395	Marionette	INFO	Listening on port 61567
+WebDriver BiDi listening on ws://localhost:61561
+1660291730521	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileOZYmrG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61561/devtools/browser/14206762-7f8b-4d4e-a062-6f83f3927223
+1660291811269	Marionette	INFO	Stopped listening on port 61567
+[Parent 15788, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1660291812396	geckodriver	INFO	Listening on 127.0.0.1:61723
+1660291815456	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "61724" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilenzpqkM"
+1660291816160	Marionette	INFO	Marionette enabled
+1660291816165	Marionette	INFO	Listening on port 61729
+WebDriver BiDi listening on ws://localhost:61724
+1660291816314	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilenzpqkM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61724/devtools/browser/59fe590c-9afa-464c-9d4d-b091afd26704
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660292325339	Marionette	INFO	Stopped listening on port 61729
+1660292341923	geckodriver	INFO	Listening on 127.0.0.1:62241
+1660292344971	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "62242" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileciDUBj"
+1660292345974	Marionette	INFO	Marionette enabled
+1660292345979	Marionette	INFO	Listening on port 62250
+WebDriver BiDi listening on ws://localhost:62242
+1660292346180	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileciDUBj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62242/devtools/browser/fa8fd26c-92fd-4895-89df-abd71271120d
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660292606850	Marionette	INFO	Stopped listening on port 62250
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1660292607065	RemoteAgent	ERROR	unable to stop listener: [Exception... DevTools listening on ws://localhost:62497/devtools/browser/c5ef27ee-a7cb-4bfa-96b0-64f9c7c6dcf0
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+1660292989388	Marionette	INFO	Stopped listening on port 62505
+iverBiDi.jsm:148
+stop()@WebDriverBiDi.jsm:227
+observe()@resource://gre/modules/AsyncShutdown.jsm:577
+1660292939570	geckodriver	INFO	Listening on 127.0.0.1:64497
+1660292942621	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "64498" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekZkJlF"
+1660292943317	Marionette	INFO	Marionette enabled
+1660292943331	Marionette	INFO	Listening on port 64506
+WebDriver BiDi listening on ws://localhost:64498
+1660292944066	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekZkJlF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64498/devtools/browser/8b5bc8e8-29b0-4c00-ac91-fd6346523c46
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+1660292988329	Marionette	INFO	Stopped listening on port 64506
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1660292988432	RemoteAgent	ERROR	unable to stop listener: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilepPIF2e\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60924/devtools/browser/0607a55c-285f-4efd-b26b-61c2b1ddeb37
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+1660293038239	Marionette	INFO	Stopped listening on port 60921660293038648	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "61051" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekmJjtC"
+1660293039248	Marionette	INFO	Marionette enabled
+1660293039255	Marionette	INFO	Listening on port 61062
+WebDriver BiDi listening on ws://localhost:61051
+1660293039445	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofilekmJjtC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61051/devtools/browser/92774210-aa73-432a-b6b1-66a127da87b0
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+1660293051687	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1660293219236	Marionette	INFO	Stopped listening on port 61062
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is1660293219699	Marionette	INFO	Marionette enabled
+1660293219704	Marionette	INFO	Listening on port 61275
+WebDriver BiDi listening on ws://localhost:61267
+1660293220116	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofiledwgz2j\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61267/devtools/browser/9dce7963-f8e8-46c0-b72d-8e5890fcde6c
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+1660293233464	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1660293343333	Marionette	INFO	Stopped listening on port 61275
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660293387078	geckodriver	INFO	Listening on 127.0.0.1:61442
+1660293390147	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "61443" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileplLrPd"
+1660293390658	Marionette	INFO	Marionette enabled
+1660293390663	Marionette	INFO	Listening on port 61448
+WebDriver BiDi listening on ws://localhost:61443
+1660293390785	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileplLrPd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61443/devtools/browser/8e6a15b2-270c-4284-b171-d7e02f1be1ce
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1660293582815	Marionette	INFO	Stopped listening on port 61448
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660293614336	geckodriver	INFO	Listening on 127.0.0.1:61664
+1660293617367	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "61665" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileZNfkXj"
+1660293618348	Marionette	INFO	Marionette enabled
+1660293618353	Marionette	INFO	Listening on port 61672
+WebDriver BiDi listening on ws://localhost:61665
+1660293618694	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileZNfkXj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61665/devtools/browser/0e25b844-4963-4345-a2df-205517201470
+JavaScript warning: https://www.amcal.com.au/wcsstore8.0.1439a/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript error: https://www.amcal.com.au/online-catalogue, line 7309: ReferenceError: cmSetProduction is not defined
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+JavaScript error: resource://gre/modules/pdfjs.js, line 33: NS_ERROR_FACTORY_NOT_REGISTERED: 
+1660293978883	Marionette	INFO	Stopped listening on port 61672
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660294219416	geckodriver	INFO	Listening on 127.0.0.1:57365
+1660294222474	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "57366" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileWrl3rk"
+1660294223351	Marionette	INFO	Marionette enabled
+1660294223356	Marionette	INFO	Listening on port 57382
+WebDriver BiDi listening on ws://localhost:57366
+1660294224339	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileWrl3rk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57366/devtools/browser/bc4656a8-4816-4172-894d-9173a7921303
+1660294230162	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294230370	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294230388	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294230399	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294230452	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294230538	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294230622	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294230682	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294230993	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294230999	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294231001	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294231009	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660294231051	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+IPDL protocol Error: Received an invalid file descriptor
+JavaScript error: , line 0: NS_ERROR_ABORT
+1660294265759	Marionette	INFO	Stopped listening on port 57382
+1660294267260	geckodriver	INFO	Listening on 127.0.0.1:57496
+1660294270473	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-infobars" "--disable-extensions" "--disable-popup-blocking" "--remote-debugging-port" "57497" "-no-remote" "-profile" "C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileV2AEXC"
+1660294271671	Marionette	INFO	Marionette enabled
+1660294271678	Marionette	INFO	Listening on port 57502
+WebDriver BiDi listening on ws://localhost:57497
+1660294272227	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pc38\\AppData\\Local\\Temp\\rust_mozprofileV2AEXC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57497/devtools/browser/f441c2a0-8005-412b-b0bc-bfcf79bdb76f
+1660294276840	Marionette	INFO	Stopped listening on port 57502
