@@ -14,9 +14,9 @@ import csv
 import os
 import re
 
-# Amcal - https://www.amcal.com.au/online-catalogue
+# Guardian - https://www.guardianpharmacies.com.au/catalogue
 
-def get_cata_from_amcal(retailer_url, retailer_name):
+def get_cata_from_guardian(retailer_url, retailer_name):
     catalogue_option = catalogue_option_setup()
     
     download_path = catalogue_option['download_path']
@@ -37,7 +37,7 @@ def get_cata_from_amcal(retailer_url, retailer_name):
     driver.get(retailer_url)
     wait_time = WebDriverWait(driver, 10)
     try:
-        fileurl = wait_time.until(EC.presence_of_element_located((By.XPATH, '//iframe[@id="catalogIframe"]'))).get_attribute("src")
+        fileurl = wait_time.until(EC.presence_of_element_located((By.XPATH, '//div[@class="left_espot"]/iframe'))).get_attribute("src")
         
         print(retailer_name, ": 1 catalogue")
         
@@ -46,6 +46,7 @@ def get_cata_from_amcal(retailer_url, retailer_name):
             
             filename = fileurl.split("/")[-1]
             filepath = join(download_path, filename)
+            print("TEST", filepath)
             while not exists(filepath):
                 time.sleep(2)
 

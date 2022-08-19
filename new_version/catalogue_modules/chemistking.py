@@ -13,22 +13,27 @@ import re
 
 # Chemist King - https://www.chemistking.com.au/catalogue
 
-def get_cata_from_chemistking(driver, retailer_url, retailer_name, catalogue_option):
+def get_cata_from_chemistking(retailer_url, retailer_name):
+    catalogue_option = catalogue_option_setup()
+    
     download_path = catalogue_option['download_path']
     week_cata_path = catalogue_option['week_cata_path']
     jpg_path = catalogue_option['jpg_path']
     
+    weekly_record_file = catalogue_option['weekly_record_file']
     monday_ref_str = catalogue_option['monday_ref_str']
     last_day_check = catalogue_option['last_day_check']
     history_record = catalogue_option['history_record']
-    cata_tracking_writer = catalogue_option['cata_tracking_writer']
-    cata_tracking_history = catalogue_option['cata_tracking_history']
+    weekly_record_history = catalogue_option['weekly_record_history']
+    
+    driver = driver_setup(download_path, auto_download_pdf = True)
     
     if retailer_name not in history_record.keys():
         history_record[retailer_name] = []
-
+    
     driver.get(retailer_url)
     wait_time = WebDriverWait(driver, 10)
+    
     try:
         download_span = wait_time.until(EC.presence_of_element_located((By.XPATH, '//div/a/span')))
         if download_span.get_attribute('textContent') == 'Download PDF Catalogue':
@@ -67,7 +72,7 @@ def get_cata_from_chemistking(driver, retailer_url, retailer_name, catalogue_opt
                     continue
     except TimeoutException:
         print(retailer_name, ": ", "No new catalogue available")
-        if len(cata_tracking_history[(cata_tracking_history['Retailer Name']==retailer_name) & (cata_tracking_history['Date Reference']==monday_ref_str)]) == 0 and last_day_check:
+        if len(weekly_record_history[(weekly_record_history['Retailer Name']==retailer_name) & (weekly_record_history['Date Reference']==monday_ref_str)]) == 0 and last_day_check:
             cata_tracking_writer.writerow([retailer_name, "No new catalogue available", monday_ref_str])
             
     return driver

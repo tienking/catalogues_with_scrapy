@@ -17,7 +17,7 @@ import re
 
 # Salefinder - https://salefinder.com.au
 
-def get_cata_from_salefinder(driver, retailer_url, retailer_name, catalogue_option):
+def get_cata_from_salefinder(retailer_url, retailer_name):
     catalogue_option = catalogue_option_setup()
     
     download_path = catalogue_option['download_path']
@@ -28,7 +28,7 @@ def get_cata_from_salefinder(driver, retailer_url, retailer_name, catalogue_opti
     monday_ref_str = catalogue_option['monday_ref_str']
     last_day_check = catalogue_option['last_day_check']
     history_record = catalogue_option['history_record']
-    cata_tracking_history = catalogue_option['cata_tracking_history']
+    weekly_record_history = catalogue_option['weekly_record_history']
     
     driver = driver_setup(download_path, auto_download_pdf = True)
     
@@ -80,7 +80,7 @@ def get_cata_from_salefinder(driver, retailer_url, retailer_name, catalogue_opti
 
     except TimeoutException:
         print(retailer_name, ": ", "No new catalogue available")
-        if len(cata_tracking_history[(cata_tracking_history['Retailer Name']==retailer_name) & (cata_tracking_history['Date Reference']==monday_ref_str)]) == 0 and last_day_check:
+        if len(weekly_record_history[(weekly_record_history['Retailer Name']==retailer_name) & (weekly_record_history['Date Reference']==monday_ref_str)]) == 0 and last_day_check:
             weekly_record_writer.writerow([retailer_name, "No new catalogue available", monday_ref_str])
     finally:
         driver.close()

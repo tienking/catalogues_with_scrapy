@@ -8,7 +8,7 @@ import os
 def download_jpg_to_pdf(img_urls, cata_name, jpg_path, output_path):
     index = 1
     for img_url in img_urls:
-        if img_url.endswith(".jpg"):
+        if ".webp" in img_url or ".jpg" in img_url:
             img_path = join(jpg_path,"page_" + str(index).rjust(3, '0') + ".jpg")
             #--------------
             r = requests.get(img_url, stream=True, headers={'User-agent': 'Mozilla/5.0'})
